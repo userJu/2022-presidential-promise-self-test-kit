@@ -44,6 +44,9 @@ const Borders = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 5px;
+    background-color: ${(props) => props.color};
+
     &:hover {
       background-color: gray;
     }
@@ -61,8 +64,6 @@ const StartBtnBox = styled.div`
     border-right: 1px solid black;
     padding: 7px 10px;
   }
-  
-  }
 `;
 
 const Button = styled.button`
@@ -79,11 +80,14 @@ interface IPromises {
 
 const ChooseRange = () => {
   const [promises, setPromises] = useState<IPromises[]>([]);
+  const [clicked, setClicked] = useState("white");
   const bordersClick = (e: any) => {
     const {
       target: { title },
     } = e;
     if (title !== "") {
+      const style = e.target.style;
+      style.backgroundColor = "pink";
       setPromises((prevPromise) => [title, ...prevPromise]);
     }
   };
@@ -99,16 +103,14 @@ const ChooseRange = () => {
       <MainName>2022 대선 공약 선호도 자가진단 키트</MainName>
       <SubName>당신의 정책에 투표하세요</SubName>
       <MainBorder>
-        <h3>관심있는 정책들을 중복 선택 후 '시작하기' 버튼을 눌러주세요</h3>
-        <Borders onClick={bordersClick}>
+        <h3>관심있는 정책들을 중복 선택 후 버튼을 눌러주세요</h3>
+        <Borders onClick={bordersClick} color={clicked}>
           <div title="경제">경제(주식, 부동산)</div>
           <div title="일자리">일자리(노동, 일자리)</div>
           <div title="환경">환경(기후위기, 환경, 동물권)</div>
           <div title="후생 발전">후생 발전(출생, 육아, 교육)</div>
           <div title="국방">국방(군인 처우, 사드 배치)</div>
-          <div title="성평등">
-            성평등(여성, 차별금지법,..그...그 혼인안하고같이사는,,그뭐더라)
-          </div>
+          <div title="성평등">성평등(여성, 차별금지법, 생활동반자법)</div>
           <div title="노후">노후(연기금, 노인공약)</div>
           <div title="지역균형">지역균형 발전</div>
           <div title="기타">기타</div>
@@ -128,7 +130,6 @@ const ChooseRange = () => {
             width="1000px"
             height="1000px"
             viewBox="0 0 1000 1000"
-            enable-background="new 0 0 1000 1000"
           >
             <g>
               <path
