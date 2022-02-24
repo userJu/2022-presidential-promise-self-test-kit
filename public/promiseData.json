@@ -1,0 +1,167 @@
+{
+  "promiseList": [
+    {
+      "id": "경제",
+      "questionList": [
+        {
+          "qName": "1. 주택 공급, 어떻게 얼만큼?",
+          "answerList": [
+            {
+              "answer": "311만호 공급, 이 중 140만호 공공주택으로 공급, 수도권 중심으로 258만호 보급",
+              "candidater": "이재명",
+              "link": "https://www.jmleetogether.com/web/center_view.php?code=188"
+            },
+            {
+              "answer": "250만호 공급, 이 중 50만호로 공공주택으로 공급, 수도권 중심으로 130만호 공급",
+              "candidater": "윤석열",
+              "link": "https://www.wikiyoon.com/69ca5d97-10c1-453b-8b8f-901c6bcdcbd4"
+            },
+            {
+              "answer": "200만호 공급, 200만호 모두 공공택지에서 공공주택으로",
+              "candidater": "심상정",
+              "link": "http://www.xn--hg4br3bj9g.com/home/post_view.php?nd=2906"
+            },
+            {
+              "answer": "250만호 공급, 이 중 50만호로 공공주택으로 공급",
+              "candidater": "안철수",
+              "link": "https://ahnflix.kr/videoMain/selectVideoDetail?videoNum=77&videoCd=policy"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "2. 대출 규제 DSR(총부채원리금상환비율), LTV(주택담보대출)",
+          "answerList": [
+            {
+              "answer": "DSR ‘미래소득까지 인정’ 규제 완화, LTV 최대 90%까지 확대",
+              "candidater": "이재명",
+              "link": "https://biz.chosun.com/policy/politics/election2022/2022/02/20/LGLGNLBE6JDP5CTH2SXCH73PLA/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+            },
+            {
+              "answer": "DSR 정책 방향 미정, 생애 최초 주택구입자를 대상으로 LTV를 최대 80%까지 인정",
+              "candidater": "윤석열",
+              "link": "https://biz.newdaily.co.kr/site/data/html/2022/02/24/2022022400130.html"
+            },
+            {
+              "answer": "",
+              "candidater": "심상정",
+              "link": ""
+            },
+            {
+              "answer": "DSR 정책 방향 미정, LTV 80% 완화 및 기준금리 수준의 이자와 15년 거치·30년 상환",
+              "candidater": "안철수",
+              "link": "https://www.edaily.co.kr/news/read?newsId=03650646632230520&mediaCodeNo=257&OutLnkChk=Y"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "3. 종부세, 양도세",
+          "answerList": [
+            {
+              "answer": "종부세 개편(다주택자 예외 조항 추가), 양도세 개편(중과 유예 1년)",
+              "candidater": "이재명",
+              "link": "https://theminjoo.kr/board/view/electionpromises/721495?ca=79"
+            },
+            {
+              "answer": "종부세 폐지(종부세·재산세 통합하거나 폐지), 양도세 개편(중과 유예 2년)",
+              "candidater": "윤석열",
+              "link": "https://www.donga.com/news/Politics/article/all/20211115/110243082/1"
+            },
+            {
+              "answer": "종부세 강화(토지분 별도합산 종부세 0.7%에서 1.6%으로 강화) 양도세 강화(양도세 비과세 제한)",
+              "candidater": "심상정",
+              "link": "https://www.justice21.org/newhome/board/board_view.html?num=146447&page=1"
+            },
+            {
+              "answer": "종부세 대폭개편(재산세와 통합, 인하) 양도세 단계적 인하",
+              "candidater": "안철수",
+              "link": "https://magazine.hankyung.com/business/article/202202181884b"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "4. 증권",
+          "answerList": [
+            {
+              "answer": "주식 장기보유자 대상 양도세 우대세율 적용. 공매도 차별금지. 주가조작 원스트라이크 아웃제. 물적분할 시 자회사주식 모회사 주주 우선 배정,",
+              "candidater": "이재명",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "주식양도세 폐지. 공매도 감시체계 강화(서킷브레이크 도입). 물적분할 자회사 상장제한. 물적분할 시 자회사주식 모회사 주주 우선 배정",
+              "candidater": "윤석열",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "양도세 비과세 기준 2500만원으로 하향 (양도세강화). 주주대표소송 요건 완화. 계열분리 기업분할 명령제 도입.",
+              "candidater": "심상정",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "모든 공매도 감독. 연기금 주식 공매도용 대여 금지. 물적분할 상장 금지",
+              "candidater": "안철수",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "5. 가상화폐",
+          "answerList": [
+            {
+              "answer": "가상화폐 과세시기 늦춘다. 가상자산 투자수익 비과세 기준 5000만원까지 상향(완화), 가상자산 손실 5년간 이월 공제. ICO(가상화폐 개발을 위한 자금조달) 허용",
+              "candidater": "이재명",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "가상화폐 과세시기 늦춘다. 가상자산 투자수익 비과세 기준 5000만원까지 상향(완화), 디지털산업진흥청 설치. 가상화폐 부당수익 전액 환수",
+              "candidater": "윤석열",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "내년부터 가상화폐 과세한다. 가상자산 투자수익 비과세 기준 250만원 현행 유지",
+              "candidater": "심상정",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "가상자산 거래소 정보공시 의무화",
+              "candidater": "안철수",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    { "id": "일자리" },
+    { "id": "환경" },
+    { "id": "후생 발전" },
+    { "id": "국방" },
+    { "id": "성평등" },
+    { "id": "노후" },
+    { "id": "지역균형" },
+    { "id": "기타" }
+  ]
+}
