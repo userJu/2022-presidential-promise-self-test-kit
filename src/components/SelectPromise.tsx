@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import promiseData from "../promiseData.json";
 
@@ -90,43 +90,59 @@ const SelectPromise = () => {
   const selectedIdArr = state.promises;
   const data = promiseData.promiseList;
   const selectedData = data.filter((item) => selectedIdArr.includes(item.id));
-  console.log(selectedData);
   const [order, setOrder] = useState(0);
   const [qNumber, setQNumber] = useState(0);
   const qList = selectedData[order];
+  const [resultBtn, setResultBtn] = useState(false);
+  const navigate = useNavigate();
 
   const answerClick = (e: React.MouseEvent<HTMLLIElement>) => {
-    console.log(e.currentTarget.dataset.value);
-    if (
-      qList.questionList !== undefined &&
-      qList.questionList?.length > qNumber
-    ) {
-      console.log(qNumber);
-      setQNumber((prev) => prev + 1);
-      if (qList.questionList?.length - 1 === qNumber) {
+    if (qList.questionList !== undefined) {
+      if (qList.questionList?.length - 1 > qNumber) {
+        setQNumber((prev) => prev + 1);
+      } else if (qList.questionList?.length - 1 === qNumber) {
+        console.log("새로운 id가 들어올 예정");
         setOrder((prev) => prev + 1);
+        setQNumber(0);
       }
     }
   };
 
+  useEffect(() => {
+    console.log(order);
+    console.log(selectedData.length);
+    if (qList === undefined) {
+      navigate("/result");
+    }
+  }, [order]);
+
   return (
     <Container>
-      <PartName>{qList.id}</PartName>
-      <QuestionBoxes>
-        {qList.questionList !== undefined ? (
-          <QuestionBox>
-            <h3>{qList.questionList.length}</h3>
-            <QuestionName>{qList.questionList[qNumber].qName}</QuestionName>
-            <AnswerList>
-              {qList.questionList[qNumber].answerList.map((selector) => (
-                <Answer onClick={answerClick} data-value={selector.candidater}>
-                  {selector.answer}
-                </Answer>
-              ))}
-            </AnswerList>
-          </QuestionBox>
-        ) : null}
-      </QuestionBoxes>
+      {qList !== undefined && (
+        <>
+          <PartName>{qList.id}</PartName>
+          <QuestionBoxes>
+            {qList.questionList !== undefined ? (
+              <QuestionBox>
+                <QuestionName key={qList.questionList[qNumber].qName}>
+                  {qList.questionList[qNumber].qName}
+                </QuestionName>
+                <AnswerList>
+                  {qList.questionList[qNumber].answerList.map((selector) => (
+                    <Answer
+                      onClick={answerClick}
+                      data-value={selector.candidater}
+                    >
+                      {selector.answer}
+                    </Answer>
+                  ))}
+                </AnswerList>
+              </QuestionBox>
+            ) : null}
+          </QuestionBoxes>
+          {/* {resultBtn && <button>결과 보기</button>} */}
+        </>
+      )}
     </Container>
   );
 };
