@@ -103,12 +103,8 @@ const stampVariatnts = {
   },
 };
 
-interface IPromises {
-  promise: string;
-}
-
 const ChooseRange = () => {
-  const [promises, setPromises] = useState<IPromises[]>([]);
+  const [promises, setPromises] = useState<string[]>([]);
   const [clicked, setClicked] = useState("white");
   const navigate = useNavigate();
   const bordersClick = (e: any) => {
@@ -118,12 +114,12 @@ const ChooseRange = () => {
     if (title !== "") {
       const style = e.target.style;
       style.backgroundColor = "#d1ccc0";
-      setPromises((prevPromise) => [title, ...prevPromise]);
+      setPromises((prevPromise) => [...prevPromise, title]);
     }
   };
 
   const startBtnClick = () => {
-    navigate("/select_promise");
+    navigate("/select_promise", { state: { promises } });
   };
   console.log(promises);
   // 이렇게 하려면 모든 div에 다 설정해야 한다

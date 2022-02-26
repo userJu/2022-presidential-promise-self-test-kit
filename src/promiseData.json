@@ -1,0 +1,594 @@
+{
+  "promiseList": [
+    {
+      "id": "경제",
+      "questionList": [
+        {
+          "qName": "1. 주택 공급, 어떻게 얼만큼?",
+          "answerList": [
+            {
+              "answer": "311만호 공급, 이 중 140만호 공공주택으로 공급, 수도권 중심으로 258만호 보급",
+              "candidater": "이재명",
+              "link": "https://www.jmleetogether.com/web/center_view.php?code=188"
+            },
+            {
+              "answer": "250만호 공급, 이 중 50만호로 공공주택으로 공급, 수도권 중심으로 130만호 공급",
+              "candidater": "윤석열",
+              "link": "https://www.wikiyoon.com/69ca5d97-10c1-453b-8b8f-901c6bcdcbd4"
+            },
+            {
+              "answer": "200만호 공급, 200만호 모두 공공택지에서 공공주택으로",
+              "candidater": "심상정",
+              "link": "http://www.xn--hg4br3bj9g.com/home/post_view.php?nd=2906"
+            },
+            {
+              "answer": "250만호 공급, 이 중 50만호로 공공주택으로 공급",
+              "candidater": "안철수",
+              "link": "https://ahnflix.kr/videoMain/selectVideoDetail?videoNum=77&videoCd=policy"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "2. 대출 규제 DSR(총부채원리금상환비율), LTV(주택담보대출)",
+          "answerList": [
+            {
+              "answer": "DSR ‘미래소득까지 인정’ 규제 완화, LTV 최대 90%까지 확대",
+              "candidater": "이재명",
+              "link": "https://biz.chosun.com/policy/politics/election2022/2022/02/20/LGLGNLBE6JDP5CTH2SXCH73PLA/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+            },
+            {
+              "answer": "DSR 정책 방향 미정, 생애 최초 주택구입자를 대상으로 LTV를 최대 80%까지 인정",
+              "candidater": "윤석열",
+              "link": "https://biz.newdaily.co.kr/site/data/html/2022/02/24/2022022400130.html"
+            },
+            {
+              "answer": "",
+              "candidater": "심상정",
+              "link": ""
+            },
+            {
+              "answer": "DSR 정책 방향 미정, LTV 80% 완화 및 기준금리 수준의 이자와 15년 거치·30년 상환",
+              "candidater": "안철수",
+              "link": "https://www.edaily.co.kr/news/read?newsId=03650646632230520&mediaCodeNo=257&OutLnkChk=Y"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "3. 종부세, 양도세",
+          "answerList": [
+            {
+              "answer": "종부세 개편(다주택자 예외 조항 추가), 양도세 개편(중과 유예 1년)",
+              "candidater": "이재명",
+              "link": "https://theminjoo.kr/board/view/electionpromises/721495?ca=79"
+            },
+            {
+              "answer": "종부세 폐지(종부세·재산세 통합하거나 폐지), 양도세 개편(중과 유예 2년)",
+              "candidater": "윤석열",
+              "link": "https://www.donga.com/news/Politics/article/all/20211115/110243082/1"
+            },
+            {
+              "answer": "종부세 강화(토지분 별도합산 종부세 0.7%에서 1.6%으로 강화) 양도세 강화(양도세 비과세 제한)",
+              "candidater": "심상정",
+              "link": "https://www.justice21.org/newhome/board/board_view.html?num=146447&page=1"
+            },
+            {
+              "answer": "종부세 대폭개편(재산세와 통합, 인하) 양도세 단계적 인하",
+              "candidater": "안철수",
+              "link": "https://magazine.hankyung.com/business/article/202202181884b"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "4. 증권",
+          "answerList": [
+            {
+              "answer": "주식 장기보유자 대상 양도세 우대세율 적용. 공매도 차별금지. 주가조작 원스트라이크 아웃제. 물적분할 시 자회사주식 모회사 주주 우선 배정,",
+              "candidater": "이재명",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "주식양도세 폐지. 공매도 감시체계 강화(서킷브레이크 도입). 물적분할 자회사 상장제한. 물적분할 시 자회사주식 모회사 주주 우선 배정",
+              "candidater": "윤석열",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "양도세 비과세 기준 2500만원으로 하향 (양도세강화). 주주대표소송 요건 완화. 계열분리 기업분할 명령제 도입.",
+              "candidater": "심상정",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "모든 공매도 감독. 연기금 주식 공매도용 대여 금지. 물적분할 상장 금지",
+              "candidater": "안철수",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "5. 가상화폐",
+          "answerList": [
+            {
+              "answer": "가상화폐 과세시기 늦춘다. 가상자산 투자수익 비과세 기준 5000만원까지 상향(완화), 가상자산 손실 5년간 이월 공제. ICO(가상화폐 개발을 위한 자금조달) 허용",
+              "candidater": "이재명",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "가상화폐 과세시기 늦춘다. 가상자산 투자수익 비과세 기준 5000만원까지 상향(완화), 디지털산업진흥청 설치. 가상화폐 부당수익 전액 환수",
+              "candidater": "윤석열",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "내년부터 가상화폐 과세한다. 가상자산 투자수익 비과세 기준 250만원 현행 유지",
+              "candidater": "심상정",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "가상자산 거래소 정보공시 의무화",
+              "candidater": "안철수",
+              "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "일자리",
+      "questionList": [
+        {
+          "qName": "1. 청년 일자리",
+          "answerList": [
+            {
+              "answer": "공공기관이 정원의 5%를 청년으로 고용, 국민내일배움카드 지원액을 600만~1000만 원으로 상향.  이력서에 학력·성별 등을 못 쓰게 하는 공정 채용 제도를 확대",
+              "candidater": "이재명",
+              "link": "https://newneek.co/post/ddUjn0/"
+            },
+            {
+              "answer": "채용비리 확인 시 채용 취소. 고용세습 철폐B",
+              "candidater": "윤석열,안철수",
+              "link": "https://newneek.co/post/ddUjn0/"
+            },
+            {
+              "answer": "청년 위한 긴급 일자리 1년에 10만개 마련. 자발적 퇴사 3회까지 구직급여 지급.",
+              "candidater": "심상정",
+              "link": "https://newneek.co/post/ddUjn0/"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "2. 중대재해 처벌법",
+          "answerList": [
+            {
+              "answer": "강화",
+              "candidater": "이재명,심상정",
+              "link": "https://newneek.co/post/VMMYgj/"
+            },
+            {
+              "answer": "완화",
+              "candidater": "윤석열",
+              "link": "https://newneek.co/post/VMMYgj/"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "3. 노동시간과 상병(傷病)수당",
+          "answerList": [
+            {
+              "answer": "상병수당 더 빠르게 도입. 주 52시간보다 줄이자. 주 4.5일제 추진",
+              "candidater": "이재명",
+              "link": "https://newneek.co/post/VMMYgj/"
+            },
+            {
+              "answer": "상병수당 언급 없음. 주 52시간보다 늘리자 3~6개월 근무시간 평균 값 적용",
+              "candidater": "윤석열",
+              "link": "https://newneek.co/post/VMMYgj/"
+            },
+            {
+              "answer": "상병수당 상병수당 더 빠르게 도입 주 52시간보다 줄이자. 주 4일제 추진",
+              "candidater": "심상정",
+              "link": "https://newneek.co/post/VMMYgj/"
+            },
+            {
+              "answer": "상병수당 건강 보험 재정상 어렵다. 주 52시간보다 늘리자.",
+              "candidater": "안철수",
+              "link": "https://newneek.co/post/VMMYgj/"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "4. 비정규직 수당, 퇴직금",
+          "answerList": [
+            {
+              "answer": "비정규직 수당도입, 정규직 고용 확대 유도",
+              "candidater": "이재명",
+              "link": "https://newneek.co/post/VMMYgj/"
+            },
+            {
+              "answer": "비정규직 제도 대거 개편, 고임금자 임금제한법 재정. 1년 미만 근무자 퇴직금 지급",
+              "candidater": "심상정",
+              "link": "https://newneek.co/post/VMMYgj/"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "5. 일자리 창출",
+          "answerList": [
+            {
+              "answer": "135조 원을 투자해 디지털 인프라를 만들고, 탄소중립 신기술 개발 등으로 일자리 300만 개 창출. 50조 규모의 펀드로 창업 유도해 중소기업과 유니콘 기업이 창출",
+              "candidater": "이재명",
+              "link": "https://newneek.co/post/ddUjn0/"
+            },
+            {
+              "answer": "바이오·IT 등 신산업 생태계를 만들어 일자리 창출, 경쟁력 있는 중소기업을 지원, 규제 완화로 민간이 일자리 창출 유인. 스톡옵션 비과세 한도를 2억 원까지 올려 중소기업의 인재영입 도모",
+              "candidater": "윤석열",
+              "link": "https://newneek.co/post/ddUjn0/"
+            },
+            {
+              "answer": "재생에너지·전기차 등 5대 녹색산업 분야에서 일자리 150만 개 창출. 지역별 에너지 중소기업 일자리 30만 개, 오래된 건물 리모델링 작업으로 10만 개 등 창출",
+              "candidater": "심상정",
+              "link": "https://newneek.co/post/ddUjn0/"
+            },
+            {
+              "answer": "2조 원 규모의 펀드로 디스플레이·2차 전지·소형 원전(SMR)·수소에너지·바이오산업에서 5가지 초격차 기술을 확보 후 관련 인재 50만 명 야엉. 삼성전자 급의 글로벌 기업을 5개 양성.",
+              "candidater": "안철수",
+              "link": "https://newneek.co/post/ddUjn0/"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "환경",
+      "questionList": [
+        {
+          "qName": "1. 원자력, 재생 에너지 관련 ",
+          "answerList": [
+            {
+              "answer": "원자력 발전 중단(신규건설 없고 노후된 건 폐지), 2030년까지 재생에너지 비율 30%까지 늘리겠다.",
+              "candidater": "이재명",
+              "link": "https://newneek.co/post/vViGhl/"
+            },
+            {
+              "answer": "신한울 3·4호기 재개. 원자력 발전소 신규 건설. 소형모듈 원전 기술 개발. 2030년 중반까지 재생에너지 비율 30%까지 늘리겠다.",
+              "candidater": "윤석열",
+              "link": "https://newneek.co/post/vViGhl/"
+            },
+            {
+              "answer": "2040년까지 탈핵. 2030년까지 재생에너지 비율 50%까지 늘리겠다.",
+              "candidater": "심상정",
+              "link": "https://newneek.co/post/vViGhl/"
+            },
+            {
+              "answer": "신한울 3·4호기 재개. 기존 원자력 발전소 수명 연장. 소형모듈 원전 기술 개발. 2030년까지 신재생 에너지 비율 35%까지 늘리겠다. ",
+              "candidater": "안철수",
+              "link": "https://www.ahnflix.kr/videoMain/selectVideoList?videoCd=policy&videoCtg=nuclear"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "2. 재활용 관련",
+          "answerList": [
+            {
+              "answer": "친환경 디자인 규정 재정. 무라벨 제품 제작지원. 일회용품 재질 단일화. 캔·페트병 수거기 설치. 노후 건설장비 무공해 전환 추진",
+              "candidater": "이재명",
+              "link": "https://gongyak.kr/"
+            },
+            {
+              "answer": "신축 건물에 음식물 분쇄기 설치를 통해 바이오가스 활용. 폐플라스틱 재활용 방안 마련(열분해 처리방식).",
+              "candidater": "윤석열",
+              "link": "https://www.wikiyoon.com/c7700eb5-aae0-48a1-8451-f070a577b126"
+            },
+            {
+              "answer": "생활 폐기물 100% 직공영화. 민간위탁을 하지 못하도록 ‘폐기물관리법’을 개정",
+              "candidater": "심상정",
+              "link": "https://www.wikiyoon.com/c7700eb5-aae0-48a1-8451-f070a577b126"
+            },
+            {
+              "answer": "폐기물 공공이 수거, 민간이 재활용 방식 채택. 재활용 기술 개발 지원",
+              "candidater": "안철수",
+              "link": "https://newneek.co/post/vViGhl/"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "3. 온실가스 감축 목표 NDC(현행 : 2050 탄소중립(탄소배출 0) 시나리오)",
+          "answerList": [
+            {
+              "answer": "탄소중립 2040년으로 앞당기자. 탄소세 도입 찬성.",
+              "candidater": "이재명",
+              "link": "https://newneek.co/post/FtzuHB/"
+            },
+            {
+              "answer": "목표에는 동의, 방법은 바뀌어야 한다.",
+              "candidater": "윤석열",
+              "link": "https://newneek.co/post/FtzuHB/"
+            },
+            {
+              "answer": "기후 위기 대응이 국가 제 1전략이 돼야 한다. 2030년까지 탄소중립 목표. 탄소세 도입 찬성",
+              "candidater": "심상정",
+              "link": "https://newneek.co/post/FtzuHB/"
+            },
+            {
+              "answer": "탄소중립은 현실적으로 불가능하다. 석탄 발전소 관리에 더욱 신경 쓰자. 탄소세 도입 반대",
+              "candidater": "안철수",
+              "link": "https://www.ahnflix.kr/videoMain/selectVideoDetail?videoNum=69&videoCd=policy"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "4. 육식과 채식",
+          "answerList": [
+            {
+              "answer": "공공기관(특히 초·중·고등학교) 급식에 채식 선택권 보장. 개식용 금지. 비건 문화 확산 지원. 국가채식인증시스템 채식식당인증제 도입",
+              "candidater": "이재명",
+              "link": "https://www.hani.co.kr/arti/politics/politics_general/1025709.html"
+            },
+            {
+              "answer": "육식과 채식 이분법 접근 반대. 육류 소비를 줄이기보다는 좋은 고기를 먹을 수 있도록 하겠다.",
+              "candidater": "윤석열",
+              "link": "https://www.hani.co.kr/arti/politics/politics_general/1025709.html"
+            },
+            {
+              "answer": "공공기관 월 4회 채식식단 제공 의무화. 학교급식 채식 식단 확대. 우유·두유 선택권 부여. 육류 소비 줄일 수 있는 문화 조성",
+              "candidater": "심상정",
+              "link": "https://www.hani.co.kr/arti/politics/politics_general/1025709.html"
+            },
+            {
+              "answer": "채식인 존중. 식습관은 개개인의 선택의 문제",
+              "candidater": "안철수",
+              "link": "https://www.hani.co.kr/arti/politics/politics_general/1025709.html"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "5. 동물권",
+          "answerList": [
+            {
+              "answer": "135조 원을 투자해 디지털 인프라를 만들고, 탄소중립 신기술 개발 등으로 일자리 300만 개 창출. 50조 규모의 펀드로 창업 유도해 중소기업과 유니콘 기업이 창출",
+              "candidater": "이재명",
+              "link": "https://newneek.co/post/wTsjNN/"
+            },
+            {
+              "answer": "바이오·IT 등 신산업 생태계를 만들어 일자리 창출, 경쟁력 있는 중소기업을 지원, 규제 완화로 민간이 일자리 창출 유인. 스톡옵션 비과세 한도를 2억 원까지 올려 중소기업의 인재영입 도모",
+              "candidater": "윤석열",
+              "link": "https://newneek.co/post/wTsjNN/"
+            },
+            {
+              "answer": "재생에너지·전기차 등 5대 녹색산업 분야에서 일자리 150만 개 창출. 지역별 에너지 중소기업 일자리 30만 개, 오래된 건물 리모델링 작업으로 10만 개 등 창출",
+              "candidater": "심상정",
+              "link": "https://newneek.co/post/wTsjNN/"
+            },
+            {
+              "answer": "2조 원 규모의 펀드로 디스플레이·2차 전지·소형 원전(SMR)·수소에너지·바이오산업에서 5가지 초격차 기술을 확보 후 관련 인재 50만 명 야엉. 삼성전자 급의 글로벌 기업을 5개 양성.",
+              "candidater": "안철수",
+              "link": "https://newneek.co/post/wTsjNN/"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "후생 발전",
+      "questionList": [
+        {
+          "qName": "1. 출산 장려",
+          "answerList": [
+            {
+              "answer": "육아휴식 쿼터제 도입(출산시 유아휴직 강제). 난임검사 기초 건강검진에 포함. 난임수술 약제비 건강보험 적용. 난임부부 정신건강 바우처 제공. 공공산후조리원 구축.",
+              "candidater": "이재명",
+              "link": "https://newneek.co/post/wWavyY/"
+            },
+            {
+              "answer": "난임시술 지원 확대. 임신시 60만원 상당의 정신건강 바우처 제공. 산후우울증 지원. 육아휴직 기간 확대(부모합쳐 3년) 출생시 1년간 매월 100만원씩 지원. 양육수당 30만원으로 확대.",
+              "candidater": "윤석열,안철수",
+              "link": "https://newneek.co/post/wWavyY/"
+            },
+            {
+              "answer": "육아휴직 기간 확대(부모 합쳐 2년) 육아휴직 의무화. 휴직 기간 중 수령 월급 인상. 1년 추가 수령. 육아휴직 적극 활용 기업에게 대체 인력 구인을 위한 인센티브 제공. 자영업자·플랫폼 노동자 등 특수 노동자 육아휴직 사용 가능토록 한다.",
+              "candidater": "심상정",
+              "link": "https://newneek.co/post/wWavyY/"
+            },
+            {
+              "answer": "육아휴직 쓸 수 있는 환경 마련. 지역별 반값 공공산후조리원 구축.",
+              "candidater": "안철수",
+              "link": "https://newneek.co/post/wWavyY/"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "2. 돌봄",
+          "answerList": [
+            {
+              "answer": "어린이집 교사 1인당 담당 아동 OECD 수준으로 줄이겠다(현행보다 평균 6명 줄여야함). 모든 초등생 3시 하교토록 수업 시간 확대. 공교육 내에서 7시 까지 온종일 돌봄 도입. 하굣길 교통안전 담당자 채용. 아동 급식카드 제도 개선. ",
+              "candidater": "이재명",
+              "link": "https://newneek.co/post/wWavyY/"
+            },
+            {
+              "answer": "자녀 한명당 한 학기에 1일 추가연차 제공. 만 5세까지 무상보육. 초등학교 온종일 돌봄 교실 운영. 모든 초등생 무상급식 지원. 한부모 가족 지원 확대",
+              "candidater": "윤석열,안철수",
+              "link": "https://newneek.co/post/wWavyY/"
+            },
+            {
+              "answer": "‘생애 주기별 노동시간 선택제’ 노동시간 단축, 유연화 실시. ‘돌봄자 수당’ 도입.",
+              "candidater": "심상정",
+              "link": "https://newneek.co/post/wWavyY/"
+            },
+            {
+              "answer": "국공립 보육시설 확충. 오후 7시 까지 온종일 돌봄 서비스 도입.",
+              "candidater": "안철수",
+              "link": "https://newneek.co/post/wWavyY/"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "3. 교육",
+          "answerList": [
+            {
+              "answer": "대입공정성위원회 설치(수시전형 공정성 강화). 공공입학사정관제 도입. 수능 초고난도 문항 출제 금지. 지역대학 혁신법인 설립 및 공유대학·연합대학 추진. 한국형 대학원 공유체제 구축. 지역대학, 평생학습시민대학 플랫폼 신설",
+              "candidater": "이재명",
+              "link": "http://www.kyosu.net/news/articleView.html?idxno=85270"
+            },
+            {
+              "answer": "새로운 대입제도. 대학평가제 개선. 고등교육 재정지원 확대. 특성화고·전문대 고숙련 전문인재 양성 지원(신산업 직업교육 체제·교육과정 개편)",
+              "candidater": "윤석열",
+              "link": "http://www.kyosu.net/news/articleView.html?idxno=85270"
+            },
+            {
+              "answer": "서울대 10개 만들기(거점국립대 육성). 대학통합네트워크(공동학위제) 구축. 미래대학(지방대 우선 지정). 고등교육재정교부금법 제정. 대학 무상교육(전문대, 국공립대 우선 시행). 고등평생직업교육기관 육성을 위한 전문대 재정 지원 확대",
+              "candidater": "심상정",
+              "link": "http://www.kyosu.net/news/articleView.html?idxno=85270"
+            },
+            {
+              "answer": "수능 연 2회(7·10월) 실시. 교육부 폐지. 대학·연구분야, 총리실 담당. 사립대 등록금 자율화. 지역거점 평생교육기관으로서 지방대 재정 지원.",
+              "candidater": "안철수",
+              "link": "http://www.kyosu.net/news/articleView.html?idxno=85270"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "4. 학자금",
+          "answerList": [
+            {
+              "answer": "비정규직 수당도입, 정규직 고용 확대 유도",
+              "candidater": "이재명",
+              "link": "https://newneek.co/post/VMMYgj/"
+            },
+            {
+              "answer": "비정규직 제도 대거 개편, 고임금자 임금제한법 재정. 1년 미만 근무자 퇴직금 지급",
+              "candidater": "심상정",
+              "link": "https://newneek.co/post/VMMYgj/"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "qName": "5. 일자리 창출",
+          "answerList": [
+            {
+              "answer": "135조 원을 투자해 디지털 인프라를 만들고, 탄소중립 신기술 개발 등으로 일자리 300만 개 창출. 50조 규모의 펀드로 창업 유도해 중소기업과 유니콘 기업이 창출",
+              "candidater": "이재명",
+              "link": "https://newneek.co/post/ddUjn0/"
+            },
+            {
+              "answer": "바이오·IT 등 신산업 생태계를 만들어 일자리 창출, 경쟁력 있는 중소기업을 지원, 규제 완화로 민간이 일자리 창출 유인. 스톡옵션 비과세 한도를 2억 원까지 올려 중소기업의 인재영입 도모",
+              "candidater": "윤석열",
+              "link": "https://newneek.co/post/ddUjn0/"
+            },
+            {
+              "answer": "재생에너지·전기차 등 5대 녹색산업 분야에서 일자리 150만 개 창출. 지역별 에너지 중소기업 일자리 30만 개, 오래된 건물 리모델링 작업으로 10만 개 등 창출",
+              "candidater": "심상정",
+              "link": "https://newneek.co/post/ddUjn0/"
+            },
+            {
+              "answer": "2조 원 규모의 펀드로 디스플레이·2차 전지·소형 원전(SMR)·수소에너지·바이오산업에서 5가지 초격차 기술을 확보 후 관련 인재 50만 명 야엉. 삼성전자 급의 글로벌 기업을 5개 양성.",
+              "candidater": "안철수",
+              "link": "https://newneek.co/post/ddUjn0/"
+            },
+            {
+              "answer": "관심 없는 항목이다",
+              "candidater": "없음",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    { "id": "국방" },
+    { "id": "성평등" },
+    { "id": "노후" },
+    { "id": "지역균형" },
+    { "id": "기타" }
+  ]
+}
