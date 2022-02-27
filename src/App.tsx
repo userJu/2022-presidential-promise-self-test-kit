@@ -65,6 +65,34 @@ button{
   outline:none;
   border:none;
 }
+h1{
+  font-size:5vw;
+}
+h2{
+  font-size:3.5vw;
+}
+h3{
+  font-size:3vw;
+}
+span,li,h4{
+  font-size:2.5vw;
+  line-height:130%;
+}
+@media screen and (min-width :500px){
+  h1{
+  font-size:20px;
+}
+h2{
+  font-size:16px;
+}
+h3{
+  font-size:12px;
+}
+span,li,h4{
+  font-size:10px;
+  line-height:130%;
+}
+}
 `;
 
 const App = () => {

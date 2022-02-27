@@ -16,7 +16,6 @@ const Container = styled.div`
 `;
 
 const PartName = styled.h1`
-  font-size: 25px;
   width: 90%;
   text-align: center;
   margin: 3rem 0;
@@ -31,7 +30,6 @@ const QuestionBox = styled.div`
   border: 2px solid ${(props) => props.theme.colors.subBgColor};
 `;
 const QuestionName = styled.h2`
-  font-size: 20px;
   text-align: center;
   margin-left: 1rem;
   margin-bottom: 1rem;
@@ -40,6 +38,8 @@ const QuestionName = styled.h2`
 
 const AnswerList = styled.ul`
   padding: 1rem;
+  font-family: ${(props) => props.theme.font.basicFont};
+  font-weight: bold;
 `;
 const Answer = styled.li`
   margin: 10px 0;

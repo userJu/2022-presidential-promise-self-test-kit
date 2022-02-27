@@ -14,5 +14,11 @@ declare module "styled-components" {
       noneClickBtn: string;
       clickedBtn: string;
     };
+    font: {
+      basicFont: string;
+    };
+    fontSize: {
+      header: string;
+    };
   }
 }

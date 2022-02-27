@@ -7,7 +7,6 @@ import 윤석열 from "../image/윤석열.jpg";
 import 이재명 from "../image/이재명.jpg";
 
 const Container = styled.div`
-  border: 1px solid black;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -19,7 +18,6 @@ const Container = styled.div`
 `;
 
 const ResultName = styled.h1`
-  font-size: 25px;
   width: 90%;
   text-align: center;
   margin: 0.3rem 0;
@@ -28,7 +26,6 @@ const ResultName = styled.h1`
 `;
 
 const ResultSupport = styled.h2`
-  font-size: 20px;
   margin-bottom: 5rem;
 
   color: ${(props) => props.theme.colors.accentColorDarkPurple};
@@ -55,12 +52,10 @@ const MyResultBox = styled.div`
   padding: 3rem 0;
   margin-top: 3rem;
   h2 {
-    font-size: 17px;
     color: ${(props) => props.theme.colors.accentColorDarkPurple};
     padding: 0.6rem;
   }
   h4 {
-    font-size: 12px;
     padding-left: 1.5rem;
     margin-bottom: 2rem;
   }
@@ -69,12 +64,15 @@ const MyResultBox = styled.div`
 const MyAnswer = styled.ul`
   display: flex;
   flex-direction: column;
+  font-family: ${(props) => props.theme.font.basicFont};
+  font-weight: bold;
   li {
     padding: 0.5rem;
     padding-left: 1rem;
     overflow-wrap: break-word;
     h3 {
       padding-bottom: 0.3rem;
+      line-height: 120%;
       a {
         color: ${(props) => props.theme.colors.accentColorDarkPurple};
       }
@@ -142,7 +140,6 @@ const ResultPage = () => {
   // };
 
   useEffect(() => {
-    console.log(userChoice);
     let ChoicedCandidate: IChoicedCandidate = {
       이재명: 0,
       윤석열: 0,

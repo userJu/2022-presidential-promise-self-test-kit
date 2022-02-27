@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,14 +15,13 @@ const Container = styled.div`
   cursor: default;
 `;
 const MainName = styled.h1`
-  font-size: 25px;
   width: 90%;
   text-align: center;
   margin: 0.3rem 0;
+  margin-top: 8rem;
   color: ${(props) => props.theme.colors.accentColorPurple};
 `;
-const SubName = styled.span`
-  font-size: 20px;
+const SubName = styled.h2`
   color: ${(props) => props.theme.colors.accentColorDarkPurple};
 `;
 const MainBorder = styled.div`
@@ -32,7 +31,6 @@ const MainBorder = styled.div`
   margin-top: 3.3rem;
   max-width: 1200px;
   h3 {
-    font-size: 16px;
     margin-bottom: 0.7rem;
   }
 `;
@@ -44,6 +42,7 @@ const Borders = styled.div`
   grid-gap: 10px;
 
   div {
+    background-color: ${(props) => props.theme.colors.whiteColor};
     cursor: pointer;
 
     /* border: 2px solid ${(props) => props.theme.colors.subBgColor}; */
@@ -77,12 +76,12 @@ const StartBtnBox = styled.div`
 
 const Button = styled.button`
   cursor: pointer;
-  background-color: ${(props) => props.theme.colors.btnColor};
+  background-color: transparent;
 `;
 
 const Svg = styled.svg`
-  width: 30px;
-  height: 30px;
+  width: 4vw;
+  height: 4vw;
   path {
   }
 `;
@@ -92,18 +91,19 @@ const Notice = styled.div`
   bottom: 3.5rem;
   max-width: 1200px;
   margin-top: 8rem;
+  margin-bottom: 2rem;
+  font-family: ${(props) => props.theme.font.basicFont};
+  font-weight: bold;
   h3 {
-    font-size: 15px;
     margin-bottom: 0.1rem;
   }
   span {
-    font-size: 12px;
   }
 `;
 
 const ChooseRange = () => {
   const [promises, setPromises] = useState<string[]>([]);
-  const [clicked, setClicked] = useState("white");
+  const [alert, setAlert] = useState(false);
   const navigate = useNavigate();
   const bordersClick = (e: any) => {
     const {
@@ -117,7 +117,12 @@ const ChooseRange = () => {
   };
 
   const startBtnClick = () => {
-    navigate("/select_promise", { state: { promises } });
+    if (promises.length > 0) {
+      navigate("/select_promise", { state: { promises } });
+    } else {
+      console.log("아니 다시보라고!");
+      setAlert((prev) => !prev);
+    }
   };
   console.log(promises);
   // 이렇게 하려면 모든 div에 다 설정해야 한다
@@ -130,7 +135,7 @@ const ChooseRange = () => {
       <SubName>당신의 정책에 투표하세요</SubName>
       <MainBorder>
         <h3>관심있는 정책들을 '중복 선택' 후 버튼을 눌러주세요</h3>
-        <Borders onClick={bordersClick} color={clicked}>
+        <Borders onClick={bordersClick}>
           <div title="경제">경제</div>
           <div title="일자리">일자리</div>
           <div title="환경">환경</div>
@@ -142,20 +147,11 @@ const ChooseRange = () => {
           <div title="기타">기타</div> */}
         </Borders>
       </MainBorder>
+      {alert && <h4>정책을 선택해주세요</h4>}
       <StartBtnBox>
-        <h3>?</h3>
-        <h3>자가진당</h3>
-        <h3>김정책</h3>
-        <Button
-          onClick={startBtnClick}
-          // variants={stampVariatnts}
-          // initial="notHover"
-          // whileHover="hover"
-        >
+        <h3>시작하기👉</h3>
+        <Button onClick={startBtnClick}>
           <Svg
-            // variants={stampVariatnts}
-            // initial="notHover"
-            // whileHover="hover"
             xmlns="http://www.w3.org/2000/svg"
             version="1.1"
             id="레이어_1"
