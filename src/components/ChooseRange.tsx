@@ -80,10 +80,9 @@ const Button = styled.button`
 `;
 
 const Svg = styled.svg`
-  width: 4vw;
-  height: 4vw;
-  path {
-  }
+  width: 20px;
+  height: 20px;
+  display: flex;
 `;
 
 const Notice = styled.div`

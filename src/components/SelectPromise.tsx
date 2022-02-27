@@ -25,7 +25,8 @@ const PartName = styled.h1`
 const QuestionBox = styled.div`
   padding: 3rem 0;
   transform-origin: left;
-  width: 100vw;
+  width: 90%;
+  max-width: 1200px;
   background-color: ${(props) => props.theme.colors.whiteColor};
   border: 2px solid ${(props) => props.theme.colors.subBgColor};
 `;
