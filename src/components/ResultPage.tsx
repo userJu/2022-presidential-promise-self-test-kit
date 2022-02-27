@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import 심상정 from "../image/심상정.jpg";
 import 안철수 from "../image/안철수.jpg";
@@ -26,15 +26,42 @@ const ResultName = styled.h1`
 `;
 
 const ResultSupport = styled.h2`
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 
   color: ${(props) => props.theme.colors.accentColorDarkPurple};
+`;
+
+const ShareBtnBox = styled.div`
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0 0.5rem;
+    background-color: ${(props) => props.theme.colors.btnColor};
+    border: 1px solid ${(props) => props.theme.colors.subBgColor};
+    border-radius: 50%;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
 `;
 
 const ResultBoxes = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
   grid-gap: 10px;
   width: 90%;
   height: 40vh;
@@ -56,7 +83,7 @@ const MyResultBox = styled.div`
     padding: 0.6rem;
   }
   h4 {
-    padding-left: 1.5rem;
+    padding: 0 1.5rem;
     margin-bottom: 2rem;
   }
 `;
@@ -66,6 +93,9 @@ const MyAnswer = styled.ul`
   flex-direction: column;
   font-family: ${(props) => props.theme.font.basicFont};
   font-weight: bold;
+  border-bottom: 1px solid ${(props) => props.theme.colors.subBgColor};
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
   li {
     padding: 0.5rem;
     padding-left: 1rem;
@@ -114,6 +144,7 @@ interface IOnepick {
 
 const ResultPage = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const state: any = location.state;
   const userChoice = state.userChoice;
   const selectedData = state.selectedData;
@@ -139,6 +170,22 @@ const ResultPage = () => {
   // setCandidate((prev: any) => [...prev, { part: part, freCandidate }]);
   // };
 
+  // 카카오톡 공유하기
+  // useEffect(() => {
+  //   window.Kakao.init(process.env.REACT_APP_JAVASCRIPT_KEY);
+  //   window.Kakao.isInitialized();
+  //   console.log(window.Kakao.isInitialized());
+  // }, []);
+
+  // 카카오톡 공유하기
+  const shareKakao = () => {
+    window.Kakao.Link.sendCustom({
+      templateId: 72020,
+    });
+  };
+
+  // 링크 공유하기
+  const shareLink = () => {};
   useEffect(() => {
     let ChoicedCandidate: IChoicedCandidate = {
       이재명: 0,
@@ -200,7 +247,6 @@ const ResultPage = () => {
     //
 
     let arr = Object.values(ChoicedCandidate);
-    console.log(arr);
     const maxVoted = Math.max(...arr);
     const maxCandidate = Object.keys(ChoicedCandidate).find((key: string) => {
       return ChoicedCandidate[key] === maxVoted;
@@ -212,61 +258,78 @@ const ResultPage = () => {
       (((maxVoted / userChoice.length) * 100) / selectedData.length).toFixed(2)
     );
   }, []);
-  const shareKakao = () => {
-    window.Kakao.Link.sendCustom({
-      templateId: 72020,
-    });
-  };
-  // 카카오톡 공유하기
-  // useEffect(() => {
-  //   window.Kakao.init(process.env.REACT_APP_JAVASCRIPT_KEY);
-  //   window.Kakao.isInitialized();
-  //   console.log(window.Kakao.isInitialized());
-  // }, []);
 
   return (
     <Container>
-      <ResultName>{selector}</ResultName>
-      <ResultSupport>공약 지지율 : {selectorPer}%</ResultSupport>
-      <ResultBoxes>
-        {selectedData.map((data: ISelectedData) => (
-          <div key={data.id}>
-            <h3>{data.id} 부문</h3>
-            <span>
-              나의 원픽 :
-              {candidate.map((pick) =>
-                pick.part === data.id ? pick.freCandidate : null
-              )}
-            </span>
-          </div>
-        ))}
-      </ResultBoxes>
-      <MyResultBox>
-        <h2>📝나의 답변 현황</h2>
-        <h4>클릭하시면 정책 관련 사이트로 연결됩니다</h4>
-        <MyAnswer>
-          {userChoice.map((choice: any) => (
-            <li key={choice.answer}>
-              {choice.link !== "" && (
-                <>
-                  <h3>📌</h3>
-                  <h3>
-                    <a href={choice.link}>{choice.answer}</a>
-                  </h3>
-                </>
-              )}
-            </li>
-          ))}
-        </MyAnswer>
-      </MyResultBox>
-      <button onClick={shareKakao}>
-        <img
-          src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-          alt="카카오링크 보내기 버튼"
-        />
-      </button>
-
-      {/* <img src={심상정} alt="" /> */}
+      {userChoice !== null ? (
+        <>
+          <ResultName>{selector}</ResultName>
+          <ResultSupport>공약 지지율 : {selectorPer}%</ResultSupport>
+          <ShareBtnBox>
+            <button onClick={shareKakao}>
+              <img
+                src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+                alt="카카오링크 보내기 버튼"
+              />
+            </button>
+            <button onClick={shareLink}>🔗</button>
+          </ShareBtnBox>
+          <ResultBoxes
+            // 반응형
+            style={{
+              gridTemplateRows: `repeat(${
+                selectedData.length % 2 !== 0
+                  ? selectedData.length / 2 + 1
+                  : selectedData.length / 2
+              }, 1fr)`,
+            }}
+          >
+            {selectedData.map((data: ISelectedData) => (
+              <div key={data.id}>
+                <h3>{data.id} 부문</h3>
+                <span>
+                  나의 원픽 :
+                  {candidate.map((pick) =>
+                    pick.part === data.id ? pick.freCandidate : null
+                  )}
+                </span>
+              </div>
+            ))}
+          </ResultBoxes>
+          <MyResultBox>
+            <h2>📝나의 답변 현황</h2>
+            <h4>클릭하시면 정책 관련 사이트로 연결됩니다</h4>
+            <MyAnswer>
+              {userChoice.map((choice: any) => (
+                <li key={choice.answer}>
+                  {choice.link !== "" && (
+                    <>
+                      <h3>📌</h3>
+                      <h3>
+                        <a href={choice.link}>{choice.answer}</a>
+                      </h3>
+                    </>
+                  )}
+                </li>
+              ))}
+            </MyAnswer>
+            <h4
+              style={{
+                fontFamily: "MaruBuri-Regular",
+                fontWeight: "bold",
+              }}
+            >
+              본 테스트에 기재된 모든 텍스트들은 실시간으로 변화하는 후보들의
+              정책 방향을 반영하지 않습니다. 따라서 열람 시각에 따라 사실관계가
+              다를 수 있으니 이점 참고하시어 재미로만 테스트에 임해주시면
+              감사하겠습니다.
+            </h4>
+          </MyResultBox>
+          {/* <img src={심상정} alt="" /> */}
+        </>
+      ) : (
+        <h1>다시 테스트하기</h1>
+      )}
     </Container>
   );
 };
