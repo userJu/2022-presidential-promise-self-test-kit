@@ -206,6 +206,17 @@ const ResultPage = () => {
     setSelector(maxCandidate!);
     setSelectorPer(((maxVoted / userChoice.length) * 100).toFixed(2));
   }, []);
+  const shareKakao = () => {
+    window.Kakao.Link.sendCustom({
+      templateId: 72020,
+    });
+  };
+  useEffect(() => {
+    window.Kakao.init(process.env.REACT_APP_JAVASCRIPT_KEY);
+    window.Kakao.isInitialized();
+    console.log(window.Kakao.isInitialized());
+  }, []);
+
   return (
     <Container>
       <ResultName>{selector}</ResultName>
@@ -241,6 +252,12 @@ const ResultPage = () => {
           ))}
         </MyAnswer>
       </MyResultBox>
+      <button onClick={shareKakao}>
+        <img
+          src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+          alt="카카오링크 보내기 버튼"
+        />
+      </button>
 
       {/* <img src={심상정} alt="" /> */}
     </Container>
