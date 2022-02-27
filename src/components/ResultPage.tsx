@@ -23,6 +23,7 @@ const ResultName = styled.h1`
   width: 90%;
   text-align: center;
   margin: 0.3rem 0;
+  margin-top: 5rem;
   color: ${(props) => props.theme.colors.accentColorPurple};
 `;
 
@@ -34,8 +35,7 @@ const ResultSupport = styled.h2`
 const ResultBoxes = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-
+  grid-template-rows: repeat(1fr);
   grid-gap: 10px;
   width: 90%;
   height: 40vh;
@@ -44,6 +44,7 @@ const ResultBoxes = styled.div`
   div {
     background-color: ${(props) => props.theme.colors.whiteColor};
     padding: 0.5rem;
+    box-shadow: ${(props) => props.theme.shadow.clickedBtn};
   }
 `;
 
@@ -56,6 +57,7 @@ const MyResultBox = styled.div`
     font-size: 17px;
     color: ${(props) => props.theme.colors.accentColorDarkPurple};
     padding: 0.6rem;
+    padding-bottom: 1rem;
   }
 `;
 
@@ -68,6 +70,9 @@ const MyAnswer = styled.ul`
     overflow-wrap: break-word;
     h3 {
       padding-bottom: 0.3rem;
+      a {
+        color: ${(props) => props.theme.colors.accentColorDarkPurple};
+      }
     }
   }
 `;
@@ -86,6 +91,7 @@ interface ISelectedData {
 interface ICand {
   answer: string;
   candidate: string;
+  part: string;
   link: string;
 }
 
@@ -108,9 +114,13 @@ const ResultPage = () => {
   const state: any = location.state;
   const userChoice = state.userChoice;
   const selectedData = state.selectedData;
+  console.log(selectedData);
   const [selector, setSelector] = useState("");
   const [selectorPer, setSelectorPer] = useState("");
-  const [onPick, setOnPick] = useState<IOnepick[]>([]);
+  const [onPick, setOnPick] = useState<string[]>([]);
+
+  console.log(onPick);
+  // onPick.map((pick) => {});
 
   useEffect(() => {
     console.log(userChoice);
@@ -121,16 +131,26 @@ const ResultPage = () => {
       안철수: 0,
       없음: 0,
     };
+
     // 파트별 원픽 보여주기
-    userChoice.map((choiced: any) => {
-      selectedData.map((data: any) => {
-        if (choiced.part === data.id) {
-        }
-      });
-    });
+    // userChoice.map((choiced: any) => {
+    //   selectedData.map((data: any) => {
+    //     if (choiced.part === data.id) {
+    //       console.log(data.id, choiced.candidate);
+    //       setOnPick((prev) => [
+    //         ...prev,
+    //         { part: data.id, candidate: choiced.candidate },
+    //       ]);
+    //     }
+    //   });
+    // });
 
     // 최다득표 후보 보여주기
     userChoice.forEach((cand: ICand) => {
+      if (cand.part === "경제") {
+        console.log(cand.candidate);
+        setOnPick((prev) => [...prev, cand.candidate]);
+      }
       switch (cand.candidate) {
         case "이재명":
           ChoicedCandidate.이재명 = ChoicedCandidate.이재명 + 1;
@@ -143,6 +163,10 @@ const ResultPage = () => {
           break;
         case "안철수":
           ChoicedCandidate.안철수 = ChoicedCandidate.안철수 + 1;
+          break;
+        case "없음":
+          ChoicedCandidate.없음 = ChoicedCandidate.없음 + 1;
+          break;
       }
     });
     let arr = Object.values(ChoicedCandidate);
@@ -156,7 +180,7 @@ const ResultPage = () => {
   return (
     <Container>
       <ResultName>{selector}</ResultName>
-      <ResultSupport>지지 정도 : {selectorPer}%</ResultSupport>
+      <ResultSupport>공약 지지율 : {selectorPer}%</ResultSupport>
       <ResultBoxes>
         {selectedData.map((data: ISelectedData) => (
           <div key={data.id}>
@@ -170,11 +194,13 @@ const ResultPage = () => {
         <MyAnswer>
           {userChoice.map((choice: any) => (
             <li>
-              🔥
-              <h3>{choice.answer}</h3>
-              <span>
+              <h3>📌</h3>
+              <h3>
+                <a href={choice.link}>{choice.answer}</a>
+              </h3>
+              {/* <span>
                 팩트체크 : <a href={choice.link}>{choice.link}</a>
-              </span>
+              </span> */}
             </li>
           ))}
         </MyAnswer>

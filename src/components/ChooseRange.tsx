@@ -46,12 +46,14 @@ const Borders = styled.div`
   cursor: pointer;
 
   div {
-    border: 1px solid black;
+    border: 2px solid ${(props) => props.theme.colors.subBgColor};
+
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 5px;
     background-color: ${(props) => props.color};
+    box-shadow: ${(props) => props.theme.shadow.noneClickBtn};
 
     &:hover {
       background-color: ${(props) => props.theme.colors.subBgColor};
@@ -67,14 +69,13 @@ const StartBtnBox = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${(props) => props.theme.colors.whiteColor};
-
   h3 {
     border-right: 1px solid black;
     padding: 7px 10px;
   }
 `;
 
-const Button = styled.button`
+const Button = styled(motion.button)`
   cursor: pointer;
   background-color: ${(props) => props.theme.colors.btnColor};
 `;
@@ -83,19 +84,15 @@ const Svg = styled(motion.svg)`
   width: 30px;
   height: 30px;
   path {
-    stroke: black;
-    stroke-width: 20;
   }
 `;
 
 const stampVariatnts = {
   notHover: {
-    fill: "rgba(255,255,255,0)",
-    pathLength: 0,
+    opacity: 0,
   },
   hover: {
-    fill: "rgb(232, 56, 40)",
-    pathLength: 1,
+    opacity: 1,
     transition: {
       duration: 1,
       // delayChildren: 0.5,
@@ -111,7 +108,7 @@ const ChooseRange = () => {
     const {
       target: { title },
     } = e;
-    if (title !== "") {
+    if (title !== "" && promises.includes(title) !== true) {
       const style = e.target.style;
       style.backgroundColor = "#d1ccc0";
       setPromises((prevPromise) => [...prevPromise, title]);
@@ -140,15 +137,20 @@ const ChooseRange = () => {
           <div title="국방">국방(군인 처우, 사드 배치)</div>
           <div title="성평등">성평등(여성, 차별금지법, 생활동반자법)</div>
           <div title="노후">노후(연기금, 노인공약)</div>
-          <div title="지역균형">지역균형 발전</div>
-          <div title="기타">기타</div>
+          {/* <div title="지역균형">지역균형 발전</div>
+          <div title="기타">기타</div> */}
         </Borders>
       </MainBorder>
       <StartBtnBox>
         <h3>?</h3>
         <h3>자가진당</h3>
         <h3>김정책</h3>
-        <Button onClick={startBtnClick}>
+        <Button
+          onClick={startBtnClick}
+          // variants={stampVariatnts}
+          // initial="notHover"
+          // whileHover="hover"
+        >
           <Svg
             variants={stampVariatnts}
             initial="notHover"
@@ -163,10 +165,6 @@ const ChooseRange = () => {
             viewBox="0 0 1000 1000"
           >
             <motion.path
-              stroke="black"
-              variants={stampVariatnts}
-              initial="notHover"
-              whileHover="hover"
               // 선에 가있을때만 작동됨
               fill="#E83828"
               d="M960.692,305.367c-25.187-59.546-61.233-113.015-107.138-158.92   c-45.906-45.906-99.375-81.954-158.921-107.139C632.968,13.225,567.482,0,500,0c-67.484,0-132.968,13.225-194.635,39.308   c-59.544,25.185-113.013,61.233-158.919,107.139c-45.906,45.906-81.953,99.375-107.139,158.92C13.225,367.032,0,432.517,0,500   c0,67.482,13.225,132.969,39.307,194.633c25.186,59.547,61.233,113.014,107.139,158.922   c45.905,45.902,99.374,81.952,158.919,107.139C367.033,986.774,432.518,1000,500,1000c67.481,0,132.966-13.226,194.634-39.307   c59.546-25.187,113.015-61.236,158.921-107.139c45.904-45.908,81.951-99.375,107.138-158.922   C986.775,632.965,1000,567.482,1000,500C1000,432.518,986.775,367.034,960.692,305.367z M462.543,927.031   C242.336,908.183,71.886,723.773,71.886,501.01c0-13.923,0.666-27.696,1.968-41.287c0.977-10.195,2.311-20.287,3.992-30.264   c2.24-13.304,5.094-26.402,8.533-39.267c1.72-6.432,3.586-12.805,5.594-19.116c1.004-3.154,2.043-6.295,3.119-9.418   C148.839,205.489,290.508,89.713,462.543,74.987V927.031z M536.439,927.023V590.211l238.014,238.014   C707.189,884.785,623.65,919.459,536.439,927.023z M826.71,775.974L536.439,485.705V74.987   C729.119,91.481,883.706,234.73,919.343,419.52c0.634,3.3,1.232,6.613,1.793,9.939c1.68,9.977,3.015,20.069,3.992,30.264   c1.303,13.591,1.968,27.364,1.968,41.287C927.096,601.861,891.548,698.937,826.71,775.974z"

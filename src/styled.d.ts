@@ -10,5 +10,9 @@ declare module "styled-components" {
       accentColorPurple: string;
       accentColorDarkPurple: string;
     };
+    shadow: {
+      noneClickBtn: string;
+      clickedBtn: string;
+    };
   }
 }

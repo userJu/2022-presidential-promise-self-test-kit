@@ -4,7 +4,6 @@ import styled from "styled-components";
 import promiseData from "../promiseData.json";
 
 const Container = styled.div`
-  border: 1px solid black;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -20,26 +19,17 @@ const PartName = styled.h1`
   font-size: 25px;
   width: 90%;
   text-align: center;
-  margin: 0.3rem 0;
+  margin: 3rem 0;
   color: ${(props) => props.theme.colors.accentColorPurple};
 `;
 
-const QuestionBoxes = styled.div`
-  border: 1px solid black;
-  display: flex;
-  height: 40vh;
-  width: auto;
-  left: 0;
-`;
-
 const QuestionBox = styled.div`
-  border: 1px solid pink;
   padding: 3rem 0;
   transform-origin: left;
   width: 100vw;
   background-color: ${(props) => props.theme.colors.whiteColor};
+  border: 2px solid ${(props) => props.theme.colors.subBgColor};
 `;
-
 const QuestionName = styled.h2`
   font-size: 20px;
   text-align: center;
@@ -54,9 +44,10 @@ const AnswerList = styled.ul`
 const Answer = styled.li`
   margin: 10px 0;
   padding: 0.5rem;
-  cursor: pointer;
   background-color: ${(props) => props.theme.colors.btnColor};
+  box-shadow: ${(props) => props.theme.shadow.clickedBtn};
 
+  cursor: pointer;
   &:hover {
     background-color: ${(props) => props.theme.colors.subBgColor};
   }
@@ -108,6 +99,7 @@ const SelectPromise = () => {
   const [resultBtn, setResultBtn] = useState(false);
   const navigate = useNavigate();
   const [userChoice, setUserChoice] = useState<IUserChoice[]>([]);
+  const [userOnepick, setUserOnepick] = useState();
   const answerClick = (e: React.MouseEvent<HTMLLIElement>) => {
     if (qList.questionList !== undefined) {
       if (qList.questionList?.length - 1 > qNumber) {
@@ -121,11 +113,15 @@ const SelectPromise = () => {
       );
       if (userChoice === undefined) {
         setUserChoice([choose[0]]);
+        console.log(choose);
       } else {
         setUserChoice((prev) => [...prev, choose[0]]);
+
+        console.log(choose);
       }
     }
   };
+  console.log(userChoice);
 
   useEffect(() => {
     if (qList === undefined) {
@@ -138,26 +134,24 @@ const SelectPromise = () => {
       {qList !== undefined && (
         <>
           <PartName>{qList.id}</PartName>
-          <QuestionBoxes>
-            {qList.questionList !== undefined ? (
-              <QuestionBox>
-                <QuestionName key={qList.questionList[qNumber].qName}>
-                  {qList.questionList[qNumber].qName}
-                </QuestionName>
-                <AnswerList>
-                  {qList.questionList[qNumber].answerList.map((selector) => (
-                    <Answer
-                      onClick={answerClick}
-                      data-value={selector.candidate}
-                      key={selector.answer}
-                    >
-                      {selector.answer}
-                    </Answer>
-                  ))}
-                </AnswerList>
-              </QuestionBox>
-            ) : null}
-          </QuestionBoxes>
+          {qList.questionList !== undefined ? (
+            <QuestionBox>
+              <QuestionName key={qList.questionList[qNumber].qName}>
+                {qList.questionList[qNumber].qName}
+              </QuestionName>
+              <AnswerList>
+                {qList.questionList[qNumber].answerList.map((selector) => (
+                  <Answer
+                    onClick={answerClick}
+                    data-value={selector.candidate}
+                    key={selector.answer}
+                  >
+                    {selector.answer}
+                  </Answer>
+                ))}
+              </AnswerList>
+            </QuestionBox>
+          ) : null}
           {/* {resultBtn && <button>결과 보기</button>} */}
         </>
       )}
