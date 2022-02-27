@@ -57,7 +57,11 @@ const MyResultBox = styled.div`
     font-size: 17px;
     color: ${(props) => props.theme.colors.accentColorDarkPurple};
     padding: 0.6rem;
-    padding-bottom: 1rem;
+  }
+  h4 {
+    font-size: 12px;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -191,16 +195,18 @@ const ResultPage = () => {
       </ResultBoxes>
       <MyResultBox>
         <h2>📝나의 답변 현황</h2>
+        <h4>클릭하시면 정책 관련 사이트로 연결됩니다</h4>
         <MyAnswer>
           {userChoice.map((choice: any) => (
-            <li>
-              <h3>📌</h3>
-              <h3>
-                <a href={choice.link}>{choice.answer}</a>
-              </h3>
-              {/* <span>
-                팩트체크 : <a href={choice.link}>{choice.link}</a>
-              </span> */}
+            <li key={choice.answer}>
+              {choice.link !== "" && (
+                <>
+                  <h3>📌</h3>
+                  <h3>
+                    <a href={choice.link}>{choice.answer}</a>
+                  </h3>
+                </>
+              )}
             </li>
           ))}
         </MyAnswer>
