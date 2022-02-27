@@ -121,11 +121,29 @@ const ResultPage = () => {
   console.log(selectedData);
   const [selector, setSelector] = useState("");
   const [selectorPer, setSelectorPer] = useState("");
-  const [onPick, setOnPick] = useState<string[]>([]);
+  const [candidate, setCandidate] = useState<
+    { part: string; freCandidate: string }[]
+  >([]);
+  const [openOnepick, setOpenOnepick] = useState(false);
 
-  console.log(onPick);
-  // onPick.map((pick) => {});
+  const onePickClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const part = e.currentTarget.dataset.value;
+    let obj: any = {};
+    userChoice.map((choiced: any) => {
+      if (choiced.part === part) {
+        obj[choiced.candidate] = (obj[choiced.candidate] || 0) + 1;
+      }
+    });
+    console.log(obj);
+    console.log(Object.values(obj));
+    const frequency: number[] = Object.values(obj);
 
+    const freCandidate = Object.keys(obj).find((key: string) => {
+      return obj[key] === Math.max(...frequency);
+    });
+    setCandidate((prev: any) => [...prev, { part: part, freCandidate }]);
+  };
+  console.log(candidate);
   useEffect(() => {
     console.log(userChoice);
     let ChoicedCandidate: IChoicedCandidate = {
@@ -151,10 +169,7 @@ const ResultPage = () => {
 
     // 최다득표 후보 보여주기
     userChoice.forEach((cand: ICand) => {
-      if (cand.part === "경제") {
-        console.log(cand.candidate);
-        setOnPick((prev) => [...prev, cand.candidate]);
-      }
+      // setCandidate((prev) => [...prev, arr]);
       switch (cand.candidate) {
         case "이재명":
           ChoicedCandidate.이재명 = ChoicedCandidate.이재명 + 1;
@@ -187,9 +202,14 @@ const ResultPage = () => {
       <ResultSupport>공약 지지율 : {selectorPer}%</ResultSupport>
       <ResultBoxes>
         {selectedData.map((data: ISelectedData) => (
-          <div key={data.id}>
+          <div key={data.id} onClick={onePickClick} data-value={data.id}>
             <h3>{data.id} 부문</h3>
-            <span>나의 원픽 : 이재명</span>
+            <span>
+              나의 원픽 :
+              {candidate.map((pick) =>
+                pick.part === data.id ? pick.freCandidate : null
+              )}
+            </span>
           </div>
         ))}
       </ResultBoxes>
