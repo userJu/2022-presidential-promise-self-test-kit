@@ -125,22 +125,21 @@ const ResultPage = () => {
     { part: string; freCandidate: string }[]
   >([]);
 
-  const onePickClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    const part = e.currentTarget.dataset.value;
-    let obj: any = {};
-    userChoice.map((choiced: any) => {
-      if (choiced.part === part) {
-        obj[choiced.candidate] = (obj[choiced.candidate] || 0) + 1;
-      }
-    });
-    const frequency: number[] = Object.values(obj);
-    const freCandidate = Object.keys(obj).find((key: string) => {
-      return obj[key] === Math.max(...frequency);
-    });
-    setCandidate((prev: any) => [...prev, { part: part, freCandidate }]);
-  };
-  console.log(candidate);
-  console.log(candidate.includes({ freCandidate: "이재명", part: "경제" }));
+  //원래는 click으로 하려고 했음
+  // const onePickClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  // const part = e.currentTarget.dataset.value;
+  // let obj: any = {};
+  // userChoice.map((choiced: any) => {
+  //   if (choiced.part === part) {
+  //     obj[choiced.candidate] = (obj[choiced.candidate] || 0) + 1;
+  //   }
+  // });
+  // const frequency: number[] = Object.values(obj);
+  // const freCandidate = Object.keys(obj).find((key: string) => {
+  //   return obj[key] === Math.max(...frequency);
+  // });
+  // setCandidate((prev: any) => [...prev, { part: part, freCandidate }]);
+  // };
 
   useEffect(() => {
     console.log(userChoice);
@@ -164,28 +163,44 @@ const ResultPage = () => {
     //     }
     //   });
     // });
-
+    let obj: any = {};
     // 최다득표 후보 보여주기
-    userChoice.forEach((cand: ICand) => {
-      // setCandidate((prev) => [...prev, arr]);
-      switch (cand.candidate) {
-        case "이재명":
-          ChoicedCandidate.이재명 = ChoicedCandidate.이재명 + 1;
-          break;
-        case "윤석열":
-          ChoicedCandidate.윤석열 = ChoicedCandidate.윤석열 + 1;
-          break;
-        case "심상정":
-          ChoicedCandidate.심상정 = ChoicedCandidate.심상정 + 1;
-          break;
-        case "안철수":
-          ChoicedCandidate.안철수 = ChoicedCandidate.안철수 + 1;
-          break;
-        case "없음":
-          ChoicedCandidate.없음 = ChoicedCandidate.없음 + 1;
-          break;
-      }
-    });
+    for (let i = 0; i < selectedData.length; i++) {
+      userChoice.forEach((cand: ICand) => {
+        if (cand.part === selectedData[i].id) {
+          obj[cand.candidate] = (obj[cand.candidate] || 0) + 1;
+        }
+        // setCandidate((prev) => [...prev, arr]);
+        switch (cand.candidate) {
+          case "이재명":
+            ChoicedCandidate.이재명 = ChoicedCandidate.이재명 + 1;
+            break;
+          case "윤석열":
+            ChoicedCandidate.윤석열 = ChoicedCandidate.윤석열 + 1;
+            break;
+          case "심상정":
+            ChoicedCandidate.심상정 = ChoicedCandidate.심상정 + 1;
+            break;
+          case "안철수":
+            ChoicedCandidate.안철수 = ChoicedCandidate.안철수 + 1;
+            break;
+          case "없음":
+            ChoicedCandidate.없음 = ChoicedCandidate.없음 + 1;
+            break;
+        }
+      });
+      const frequency: number[] = Object.values(obj);
+      const freCandidate = Object.keys(obj).find((key: string) => {
+        return obj[key] === Math.max(...frequency);
+      });
+      setCandidate((prev: any) => [
+        ...prev,
+        { part: selectedData[i].id, freCandidate },
+      ]);
+    }
+
+    //
+
     let arr = Object.values(ChoicedCandidate);
     const maxVoted = Math.max(...arr);
     const maxCandidate = Object.keys(ChoicedCandidate).find((key: string) => {
@@ -198,10 +213,9 @@ const ResultPage = () => {
     <Container>
       <ResultName>{selector}</ResultName>
       <ResultSupport>공약 지지율 : {selectorPer}%</ResultSupport>
-      <span>보드를 클릭하세요</span>
       <ResultBoxes>
         {selectedData.map((data: ISelectedData) => (
-          <div key={data.id} onClick={onePickClick} data-value={data.id}>
+          <div key={data.id}>
             <h3>{data.id} 부문</h3>
             <span>
               나의 원픽 :
