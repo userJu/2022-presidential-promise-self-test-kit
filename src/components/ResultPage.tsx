@@ -164,10 +164,11 @@ const ResultPage = () => {
     // 최다득표 후보 보여주기
     for (let i = 0; i < selectedData.length; i++) {
       userChoice.forEach((cand: ICand) => {
+        // 원픽 부분 설정하기.
         if (cand.part === selectedData[i].id) {
           obj[cand.candidate] = (obj[cand.candidate] || 0) + 1;
         }
-        // setCandidate((prev) => [...prev, arr]);
+        // console.log(obj); // 잘 나온다
         switch (cand.candidate) {
           case "이재명":
             ChoicedCandidate.이재명 = ChoicedCandidate.이재명 + 1;
@@ -199,23 +200,29 @@ const ResultPage = () => {
     //
 
     let arr = Object.values(ChoicedCandidate);
+    console.log(arr);
     const maxVoted = Math.max(...arr);
     const maxCandidate = Object.keys(ChoicedCandidate).find((key: string) => {
       return ChoicedCandidate[key] === maxVoted;
     });
     setSelector(maxCandidate!);
-    setSelectorPer(((maxVoted / userChoice.length) * 100).toFixed(2));
+    setSelectorPer(
+      // 문제 : let i 안에서 forEach를 두 번 돌다 보니 for i가 몇 번 도는지, 즉 selectedData.length만큼
+      // 값이 곱해졌다고 볼 수 있어서 다시 selectedData.length로 나눴다. 이게 맞나...
+      (((maxVoted / userChoice.length) * 100) / selectedData.length).toFixed(2)
+    );
   }, []);
   const shareKakao = () => {
     window.Kakao.Link.sendCustom({
       templateId: 72020,
     });
   };
-  useEffect(() => {
-    window.Kakao.init(process.env.REACT_APP_JAVASCRIPT_KEY);
-    window.Kakao.isInitialized();
-    console.log(window.Kakao.isInitialized());
-  }, []);
+  // 카카오톡 공유하기
+  // useEffect(() => {
+  //   window.Kakao.init(process.env.REACT_APP_JAVASCRIPT_KEY);
+  //   window.Kakao.isInitialized();
+  //   console.log(window.Kakao.isInitialized());
+  // }, []);
 
   return (
     <Container>
