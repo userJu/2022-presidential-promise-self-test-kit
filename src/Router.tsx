@@ -5,7 +5,7 @@ import ResultPage from "./components/ResultPage";
 import SelectPromise from "./components/SelectPromise";
 const AppRouter = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<ChooseRange />} />
         <Route path="/select_promise" element={<SelectPromise />} />
