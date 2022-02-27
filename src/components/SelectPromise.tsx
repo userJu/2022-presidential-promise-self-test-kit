@@ -65,15 +65,9 @@ interface ILocation {
   promises: string[];
 }
 
-interface IAnswerList {
-  answer: string;
-  candidater: string;
-  link: string;
-}
 interface IQuestionInfo {
   qName: string;
-
-  answerList: IAnswerList[];
+  answerList: { answer: string; candidater: string; link: string }[];
 }
 
 interface IQuestionList {
@@ -82,6 +76,24 @@ interface IQuestionList {
 }
 interface IPromises {
   promiseList?: IQuestionList;
+}
+
+interface IUserChoice {
+  answer: string;
+  candidate: string;
+  link: string;
+}
+
+export interface ISelectedData {
+  id: string;
+  questionList: {
+    qName: string;
+    answerList: {
+      answer: string;
+      candidate: string;
+      link: string;
+    }[];
+  }[];
 }
 
 const SelectPromise = () => {
@@ -95,24 +107,29 @@ const SelectPromise = () => {
   const qList = selectedData[order];
   const [resultBtn, setResultBtn] = useState(false);
   const navigate = useNavigate();
-
+  const [userChoice, setUserChoice] = useState<IUserChoice[]>([]);
   const answerClick = (e: React.MouseEvent<HTMLLIElement>) => {
     if (qList.questionList !== undefined) {
       if (qList.questionList?.length - 1 > qNumber) {
         setQNumber((prev) => prev + 1);
       } else if (qList.questionList?.length - 1 === qNumber) {
-        console.log("새로운 id가 들어올 예정");
         setOrder((prev) => prev + 1);
         setQNumber(0);
+      }
+      const choose = qList.questionList[qNumber].answerList.filter(
+        (list) => list.answer === e.currentTarget.innerHTML
+      );
+      if (userChoice === undefined) {
+        setUserChoice([choose[0]]);
+      } else {
+        setUserChoice((prev) => [...prev, choose[0]]);
       }
     }
   };
 
   useEffect(() => {
-    console.log(order);
-    console.log(selectedData.length);
     if (qList === undefined) {
-      navigate("/result");
+      navigate("/result", { state: { userChoice, selectedData } });
     }
   }, [order]);
 
@@ -131,7 +148,8 @@ const SelectPromise = () => {
                   {qList.questionList[qNumber].answerList.map((selector) => (
                     <Answer
                       onClick={answerClick}
-                      data-value={selector.candidater}
+                      data-value={selector.candidate}
+                      key={selector.answer}
                     >
                       {selector.answer}
                     </Answer>
