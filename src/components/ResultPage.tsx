@@ -29,6 +29,8 @@ const ResultName = styled.h1`
 
 const ResultSupport = styled.h2`
   font-size: 20px;
+  margin-bottom: 5rem;
+
   color: ${(props) => props.theme.colors.accentColorDarkPurple};
 `;
 
@@ -39,7 +41,6 @@ const ResultBoxes = styled.div`
   grid-gap: 10px;
   width: 90%;
   height: 40vh;
-  margin-top: 5rem;
 
   div {
     background-color: ${(props) => props.theme.colors.whiteColor};
@@ -118,13 +119,11 @@ const ResultPage = () => {
   const state: any = location.state;
   const userChoice = state.userChoice;
   const selectedData = state.selectedData;
-  console.log(selectedData);
   const [selector, setSelector] = useState("");
   const [selectorPer, setSelectorPer] = useState("");
   const [candidate, setCandidate] = useState<
     { part: string; freCandidate: string }[]
   >([]);
-  const [openOnepick, setOpenOnepick] = useState(false);
 
   const onePickClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const part = e.currentTarget.dataset.value;
@@ -134,16 +133,15 @@ const ResultPage = () => {
         obj[choiced.candidate] = (obj[choiced.candidate] || 0) + 1;
       }
     });
-    console.log(obj);
-    console.log(Object.values(obj));
     const frequency: number[] = Object.values(obj);
-
     const freCandidate = Object.keys(obj).find((key: string) => {
       return obj[key] === Math.max(...frequency);
     });
     setCandidate((prev: any) => [...prev, { part: part, freCandidate }]);
   };
   console.log(candidate);
+  console.log(candidate.includes({ freCandidate: "이재명", part: "경제" }));
+
   useEffect(() => {
     console.log(userChoice);
     let ChoicedCandidate: IChoicedCandidate = {
@@ -200,6 +198,7 @@ const ResultPage = () => {
     <Container>
       <ResultName>{selector}</ResultName>
       <ResultSupport>공약 지지율 : {selectorPer}%</ResultSupport>
+      <span>보드를 클릭하세요</span>
       <ResultBoxes>
         {selectedData.map((data: ISelectedData) => (
           <div key={data.id} onClick={onePickClick} data-value={data.id}>

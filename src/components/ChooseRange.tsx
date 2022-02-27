@@ -89,9 +89,9 @@ const Svg = styled.svg`
 
 const Notice = styled.div`
   width: 90%;
-  position: absolute;
   bottom: 3.5rem;
   max-width: 1200px;
+  margin-top: 8rem;
   h3 {
     font-size: 15px;
     margin-bottom: 0.1rem;
