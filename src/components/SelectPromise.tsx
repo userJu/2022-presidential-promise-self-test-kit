@@ -122,7 +122,6 @@ const SelectPromise = () => {
       }
     }
   };
-  console.log(userChoice);
 
   useEffect(() => {
     if (qList === undefined) {
@@ -141,15 +140,18 @@ const SelectPromise = () => {
                 {qList.questionList[qNumber].qName}
               </QuestionName>
               <AnswerList>
-                {qList.questionList[qNumber].answerList.map((selector) => (
-                  <Answer
-                    onClick={answerClick}
-                    data-value={selector.candidate}
-                    key={selector.answer}
-                  >
-                    {selector.answer}
-                  </Answer>
-                ))}
+                {/* 문제 랜덤하게 섞기 */}
+                {qList.questionList[qNumber].answerList
+                  .sort(() => Math.random() - 0.5)
+                  .map((selector) => (
+                    <Answer
+                      onClick={answerClick}
+                      data-value={selector.candidate}
+                      key={selector.answer}
+                    >
+                      {selector.answer}
+                    </Answer>
+                  ))}
               </AnswerList>
             </QuestionBox>
           ) : null}

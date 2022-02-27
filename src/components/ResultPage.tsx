@@ -17,6 +17,19 @@ const Container = styled.div`
   cursor: default;
 `;
 
+const CandidateImg = styled.div<{ bgPhoto: string }>`
+  border: 1px solid black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3rem;
+  background-image: url(${(props) => props.bgPhoto});
+  background-size: cover;
+  background-position: center;
+`;
+
 const ResultName = styled.h1`
   width: 90%;
   text-align: center;
@@ -77,7 +90,6 @@ const MyResultBox = styled.div`
   border: 2px solid ${(props) => props.theme.colors.subBgColor};
   width: 90%;
   padding: 3rem 0;
-  margin-top: 3rem;
   h2 {
     color: ${(props) => props.theme.colors.accentColorDarkPurple};
     padding: 0.6rem;
@@ -263,39 +275,41 @@ const ResultPage = () => {
     <Container>
       {userChoice !== null ? (
         <>
-          <ResultName>{selector}</ResultName>
-          <ResultSupport>공약 지지율 : {selectorPer}%</ResultSupport>
-          <ShareBtnBox>
-            <button onClick={shareKakao}>
-              <img
-                src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-                alt="카카오링크 보내기 버튼"
-              />
-            </button>
-            <button onClick={shareLink}>🔗</button>
-          </ShareBtnBox>
-          <ResultBoxes
-            // 반응형
-            style={{
-              gridTemplateRows: `repeat(${
-                selectedData.length % 2 !== 0
-                  ? selectedData.length / 2 + 1
-                  : selectedData.length / 2
-              }, 1fr)`,
-            }}
-          >
-            {selectedData.map((data: ISelectedData) => (
-              <div key={data.id}>
-                <h3>{data.id} 부문</h3>
-                <span>
-                  나의 원픽 :
-                  {candidate.map((pick) =>
-                    pick.part === data.id ? pick.freCandidate : null
-                  )}
-                </span>
-              </div>
-            ))}
-          </ResultBoxes>
+          <CandidateImg bgPhoto={`../image/${selector}.png`}>
+            <ResultName>{selector}</ResultName>
+            <ResultSupport>공약 지지율 : {selectorPer}%</ResultSupport>
+            <ShareBtnBox>
+              <button onClick={shareKakao}>
+                <img
+                  src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+                  alt="카카오링크 보내기 버튼"
+                />
+              </button>
+              <button onClick={shareLink}>🔗</button>
+            </ShareBtnBox>
+            <ResultBoxes
+              // 반응형
+              style={{
+                gridTemplateRows: `repeat(${
+                  selectedData.length % 2 !== 0
+                    ? selectedData.length / 2 + 1
+                    : selectedData.length / 2
+                }, 1fr)`,
+              }}
+            >
+              {selectedData.map((data: ISelectedData) => (
+                <div key={data.id}>
+                  <h3>{data.id} 부문</h3>
+                  <span>
+                    나의 원픽 :
+                    {candidate.map((pick) =>
+                      pick.part === data.id ? pick.freCandidate : null
+                    )}
+                  </span>
+                </div>
+              ))}
+            </ResultBoxes>
+          </CandidateImg>
           <MyResultBox>
             <h2>📝나의 답변 현황</h2>
             <h4>클릭하시면 정책 관련 사이트로 연결됩니다</h4>
