@@ -229,8 +229,8 @@ const ResultPage = () => {
   };
 
   // 링크 공유하기
-  const shareLink = () => {
-    navigator.clipboard
+  const shareLink = async () => {
+    await navigator.clipboard
       .writeText("https://jindanpolicy.netlify.app/")
       .then(() => {
         alert("링크가 클립보드에 복사되었습니다");
