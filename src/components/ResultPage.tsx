@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import 심상정 from "../image/심상정.jpg";
-import 안철수 from "../image/안철수.jpg";
-import 윤석열 from "../image/윤석열.jpg";
-import 이재명 from "../image/이재명.jpg";
+import 심상정 from "../image/심상정.png";
+import 안철수 from "../image/안철수.png";
+import 윤석열 from "../image/윤석열.png";
+import 이재명 from "../image/이재명.png";
+import 심상정2 from "../image/심상정2.png";
+import 안철수2 from "../image/안철수2.png";
+import 윤석열2 from "../image/윤석열2.png";
+import 이재명2 from "../image/이재명2.png";
 
 const Container = styled.div`
   width: 100vw;
@@ -17,17 +21,13 @@ const Container = styled.div`
   cursor: default;
 `;
 
-const CandidateImg = styled.div<{ bgPhoto: string }>`
-  border: 1px solid black;
+const CandidateImg = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-bottom: 3rem;
-  background-image: url(${(props) => props.bgPhoto});
-  background-size: cover;
-  background-position: center;
 `;
 
 const ResultName = styled.h1`
@@ -74,16 +74,26 @@ const ShareBtnBox = styled.div`
 const ResultBoxes = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* grid-template-rows: repeat(2, 1fr); */
   grid-gap: 10px;
   width: 90%;
   height: 40vh;
+`;
 
-  div {
-    background-color: ${(props) => props.theme.colors.whiteColor};
-    padding: 0.5rem;
-    box-shadow: ${(props) => props.theme.shadow.clickedBtn};
-  }
+const ResultCard = styled.div`
+  background-color: ${(props) => props.theme.colors.whiteColor};
+  padding: 0.5rem;
+  box-shadow: ${(props) => props.theme.shadow.clickedBtn};
+  position: relative;
+`;
+const ResultCardImg = styled(CandidateImg)<{ bgPhoto: string }>`
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(${(props) => props.bgPhoto});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 const MyResultBox = styled.div`
@@ -275,7 +285,7 @@ const ResultPage = () => {
     <Container>
       {userChoice !== null ? (
         <>
-          <CandidateImg bgPhoto={`../image/${selector}.png`}>
+          <CandidateImg>
             <ResultName>{selector}</ResultName>
             <ResultSupport>공약 지지율 : {selectorPer}%</ResultSupport>
             <ShareBtnBox>
@@ -298,15 +308,21 @@ const ResultPage = () => {
               }}
             >
               {selectedData.map((data: ISelectedData) => (
-                <div key={data.id}>
+                <ResultCard key={data.id}>
                   <h3>{data.id} 부문</h3>
-                  <span>
-                    나의 원픽 :
-                    {candidate.map((pick) =>
-                      pick.part === data.id ? pick.freCandidate : null
-                    )}
-                  </span>
-                </div>
+                  {candidate.map((pick) =>
+                    pick.part === data.id ? (
+                      <>
+                        <span key={pick.part}>
+                          나의 원픽 :{pick.freCandidate}
+                        </span>
+                        <ResultCardImg
+                          bgPhoto={`image/${pick.freCandidate}.png`}
+                        ></ResultCardImg>
+                      </>
+                    ) : null
+                  )}
+                </ResultCard>
               ))}
             </ResultBoxes>
           </CandidateImg>
