@@ -1,14 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import 심상정 from "../image/심상정.png";
-import 안철수 from "../image/안철수.png";
-import 윤석열 from "../image/윤석열.png";
-import 이재명 from "../image/이재명.png";
-import 심상정2 from "../image/심상정2.png";
-import 안철수2 from "../image/안철수2.png";
-import 윤석열2 from "../image/윤석열2.png";
-import 이재명2 from "../image/이재명2.png";
 
 const Container = styled.div`
   width: 100vw;
@@ -201,13 +193,12 @@ const ResultPage = () => {
   const state: any = location.state;
   const userChoice = state.userChoice;
   const selectedData = state.selectedData;
-  const [selector, setSelector] = useState("");
+  const [selector, setSelector] = useState<string | string[]>(""); // 전체 최다 득표 후보자
   const [selectorPer, setSelectorPer] = useState("");
-  // 당첨된 후보자
+  // 파트별 최다 득표 후보자
   const [candidate, setCandidate] = useState<
     { part: string; freCandidate: string }[]
   >([]);
-  console.log(userChoice);
   //원래는 click으로 하려고 했음
   // const onePickClick = (e: React.MouseEvent<HTMLDivElement>) => {
   // const part = e.currentTarget.dataset.value;
@@ -228,7 +219,6 @@ const ResultPage = () => {
   // useEffect(() => {
   //   window.Kakao.init(process.env.REACT_APP_JAVASCRIPT_KEY);
   //   window.Kakao.isInitialized();
-  //   console.log(window.Kakao.isInitialized());
   // }, []);
 
   // 카카오톡 공유하기
@@ -240,8 +230,14 @@ const ResultPage = () => {
 
   // 링크 공유하기
   const shareLink = () => {
-    navigator.clipboard.writeText("https://jindanpolicy.netlify.app/");
-    alert("링크가 클립보드에 복사되었습니다");
+    navigator.clipboard
+      .writeText("https://jindanpolicy.netlify.app/")
+      .then(() => {
+        alert("링크가 클립보드에 복사되었습니다");
+      })
+      .catch(() => {
+        alert("링크가 복사되지 않았습니다");
+      });
   };
 
   useEffect(() => {
@@ -266,14 +262,13 @@ const ResultPage = () => {
     //   });
     // });
     let obj: any = {};
-    // 최다득표 후보 보여주기
     for (let i = 0; i < selectedData.length; i++) {
       userChoice.forEach((cand: ICand) => {
         // 원픽 부분 설정하기.
         if (cand.part === selectedData[i].id) {
-          console.log(cand.candidate);
           cand.candidate.map((c: any) => (obj[c] = (obj[c] || 0) + 1));
         }
+        // 최다득표 후보 보여주기
         cand.candidate.map((c: any) => {
           switch (c) {
             case "이재명":
@@ -295,23 +290,24 @@ const ResultPage = () => {
         });
       });
       const frequency: number[] = Object.values(obj);
-      const freCandidate = Object.keys(obj).find((key: string) => {
+      const freCandidate = Object.keys(obj).filter((key: string) => {
         return obj[key] === Math.max(...frequency);
       });
+      const partCandidate = freCandidate.join();
       setCandidate((prev: any) => [
         ...prev,
-        { part: selectedData[i].id, freCandidate },
+        { part: selectedData[i].id, freCandidate: partCandidate },
       ]);
     }
-
     //
-
     let arr = Object.values(ChoicedCandidate);
     const maxVoted = Math.max(...arr);
-    const maxCandidate = Object.keys(ChoicedCandidate).find((key: string) => {
+    // 원래는 find로 찾았지만 같은 점수를 받은 후보가 2명 이상일 경우를 위해 filter 사용
+    const maxCandidate = Object.keys(ChoicedCandidate).filter((key: string) => {
       return ChoicedCandidate[key] === maxVoted;
     });
-    setSelector(maxCandidate!);
+    // 후보가 중복될 경우
+    setSelector(maxCandidate.join());
     setSelectorPer(
       // 문제 : let i 안에서 forEach를 두 번 돌다 보니 for i가 몇 번 도는지, 즉 selectedData.length만큼
       // 값이 곱해졌다고 볼 수 있어서 다시 selectedData.length로 나눴다. 이게 맞나...
@@ -370,16 +366,16 @@ const ResultPage = () => {
         <h4>클릭하시면 정책 관련 사이트로 연결됩니다</h4>
         <MyAnswer>
           {userChoice.map((choice: any) => (
-            <li key={choice.answer}>
+            <>
               {choice.link !== "" && (
-                <>
+                <li key={choice.answer}>
                   <h3>📌</h3>
                   <h3>
                     <a href={choice.link}>{choice.answer}</a>
                   </h3>
-                </>
+                </li>
               )}
-            </li>
+            </>
           ))}
         </MyAnswer>
         <h4
