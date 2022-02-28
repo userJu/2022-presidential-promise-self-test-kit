@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -11,37 +11,6 @@ const Container = styled.div`
   background-color: ${(props) => props.theme.colors.mainBgColor};
   overflow-x: hidden;
   cursor: default;
-`;
-
-const BigImg = styled.div<{ bgPhoto: string }>`
-  border: 1px solid black;
-  width: 100vw;
-  height: 100vh;
-  background: url(${(props) => props.bgPhoto});
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-`;
-const ImgCover = styled.div`
-  border: 1px solid black;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.8);
-`;
-
-const Img = styled.img`
-  width: 90vw;
-  height: auto;
 `;
 
 const CandidateImg = styled.div`
@@ -63,7 +32,6 @@ const ResultName = styled.h1`
 
 const ResultSupport = styled.h2`
   margin-bottom: 2rem;
-
   color: ${(props) => props.theme.colors.accentColorDarkPurple};
 `;
 
@@ -73,7 +41,6 @@ const ShareBtnBox = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5rem;
   button {
     outline: none;
     border: none;
@@ -85,6 +52,7 @@ const ShareBtnBox = styled.div`
     background-color: ${(props) => props.theme.colors.btnColor};
     border: 1px solid ${(props) => props.theme.colors.subBgColor};
     border-radius: 50%;
+    box-shadow: ${(props) => props.theme.shadow.clickedBtn};
     cursor: pointer;
     img {
       width: 100%;
@@ -92,6 +60,17 @@ const ShareBtnBox = styled.div`
       border-radius: 50%;
     }
   }
+`;
+
+const RestartBtn = styled.div`
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+  background-color: ${(props) => props.theme.colors.btnColor};
+  border: 1px solid ${(props) => props.theme.colors.subBgColor};
+  color: ${(props) => props.theme.colors.accentColorDarkPurple};
+  box-shadow: ${(props) => props.theme.shadow.clickedBtn};
+  padding: 5px 7px;
+  cursor: pointer;
 `;
 
 const ResultBoxes = styled.div`
@@ -156,6 +135,12 @@ const MyAnswer = styled.ul`
   }
 `;
 
+const Connect = styled.h4`
+  a {
+    color: black;
+  }
+`;
+
 interface ISelectedData {
   id: string;
   questionList: {
@@ -183,16 +168,14 @@ interface IChoicedCandidate {
   없음: number;
 }
 
-interface IOnepick {
-  part: string;
-  candidate: string[];
-}
-
 const ResultPage = () => {
   const location = useLocation();
-  const state: any = location.state;
-  const userChoice = state.userChoice;
-  const selectedData = state.selectedData;
+  const navigate = useNavigate();
+  // 외부 경로에서 들어와서 state에 값이 없을 경우에는 일단 다 빈 배열로 만들고
+  // useEffect를 작동시켜서 첫 페이지로 돌려보낸다
+  const state: any = location.state || [];
+  const userChoice = state.userChoice || [];
+  const selectedData = state.selectedData || [];
   const [selector, setSelector] = useState<string | string[]>(""); // 전체 최다 득표 후보자
   const [selectorPer, setSelectorPer] = useState("");
   // 파트별 최다 득표 후보자
@@ -214,12 +197,17 @@ const ResultPage = () => {
   // });
   // setCandidate((prev: any) => [...prev, { part: part, freCandidate }]);
   // };
+  useEffect(() => {
+    if (location.state === null) {
+      navigate("/");
+    }
+  }, []);
 
   // 카카오톡 공유하기
-  useEffect(() => {
-    window.Kakao.init(process.env.REACT_APP_JAVASCRIPT_KEY);
-    window.Kakao.isInitialized();
-  }, []);
+  // useEffect(() => {
+  //   window.Kakao.init(process.env.REACT_APP_JAVASCRIPT_KEY);
+  //   window.Kakao.isInitialized();
+  // }, []);
 
   // 카카오톡 공유하기
   const shareKakao = () => {
@@ -239,6 +227,11 @@ const ResultPage = () => {
     } catch (error) {
       alert("다시 시도해주세요.");
     }
+  };
+
+  // 다시 시작히기
+  const restartBtn = () => {
+    navigate("/");
   };
 
   useEffect(() => {
@@ -318,11 +311,6 @@ const ResultPage = () => {
 
   return (
     <Container>
-      {/* <BigImg bgPhoto={`image/${selector}2.png`}></BigImg> */}
-      {/* <ImgCover>
-        <Img src={`image/${selector}2.png`}></Img>
-      </ImgCover> */}
-
       <CandidateImg>
         <ResultName>{selector}</ResultName>
         <ResultSupport>공약 지지율 : {selectorPer}%</ResultSupport>
@@ -335,6 +323,7 @@ const ResultPage = () => {
           </button>
           <button onClick={shareLink}>🔗</button>
         </ShareBtnBox>
+        <RestartBtn onClick={restartBtn}>다시하기</RestartBtn>
         <ResultBoxes
           // 반응형
           style={{
@@ -389,6 +378,13 @@ const ResultPage = () => {
           방향을 반영하지 않습니다. 따라서 열람 시각에 따라 사실관계가 다를 수
           있으니 이점 참고하시어 재미로만 테스트에 임해주시면 감사하겠습니다.
         </h4>
+        <Connect>
+          웹에서 문제를 발견하시면
+          <br />
+          <a href="https://github.com/userJu/2022-presidential-promise-self-test-kit">
+            👉 GitHub을 통해 연락주세요
+          </a>
+        </Connect>
       </MyResultBox>
     </Container>
   );

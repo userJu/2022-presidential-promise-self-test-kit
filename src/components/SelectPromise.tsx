@@ -90,17 +90,15 @@ export interface ISelectedData {
 
 const SelectPromise = () => {
   const location = useLocation();
-  const state: any = location.state; // state를 any로 두면 동작하긴 하는데 이게 맞는지..
-  const selectedIdArr = state.promises;
+  const state: any = location.state || []; // state를 any로 두면 동작하긴 하는데 이게 맞는지..
+  const selectedIdArr = state.promises || [];
   const data = promiseData.promiseList;
   const selectedData = data.filter((item) => selectedIdArr.includes(item.id));
   const [order, setOrder] = useState(0);
   const [qNumber, setQNumber] = useState(0);
   const qList = selectedData[order];
-  const [resultBtn, setResultBtn] = useState(false);
   const navigate = useNavigate();
   const [userChoice, setUserChoice] = useState<IUserChoice[]>([]);
-  const [userOnepick, setUserOnepick] = useState();
   const answerClick = (e: React.MouseEvent<HTMLLIElement>) => {
     if (qList.questionList !== undefined) {
       if (qList.questionList?.length - 1 > qNumber) {
@@ -114,16 +112,16 @@ const SelectPromise = () => {
       );
       if (userChoice === undefined) {
         setUserChoice([choose[0]]);
-        console.log(choose);
       } else {
         setUserChoice((prev) => [...prev, choose[0]]);
-
-        console.log(choose);
       }
     }
   };
 
   useEffect(() => {
+    if (location.state === null) {
+      navigate("/");
+    }
     if (qList === undefined) {
       navigate("/result", { state: { userChoice, selectedData } });
     }
@@ -155,7 +153,6 @@ const SelectPromise = () => {
               </AnswerList>
             </QuestionBox>
           ) : null}
-          {/* {resultBtn && <button>결과 보기</button>} */}
         </>
       )}
     </Container>
