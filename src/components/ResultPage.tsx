@@ -21,6 +21,37 @@ const Container = styled.div`
   cursor: default;
 `;
 
+const BigImg = styled.div<{ bgPhoto: string }>`
+  border: 1px solid black;
+  width: 100vw;
+  height: 100vh;
+  background: url(${(props) => props.bgPhoto});
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+`;
+const ImgCover = styled.div`
+  border: 1px solid black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.8);
+`;
+
+const Img = styled.img`
+  width: 90vw;
+  height: auto;
+`;
+
 const CandidateImg = styled.div`
   width: 100%;
   display: flex;
@@ -84,6 +115,7 @@ const ResultCard = styled.div`
   padding: 0.5rem;
   box-shadow: ${(props) => props.theme.shadow.clickedBtn};
   position: relative;
+  overflow: hidden;
 `;
 const ResultCardImg = styled(CandidateImg)<{ bgPhoto: string }>`
   height: 100%;
@@ -207,7 +239,11 @@ const ResultPage = () => {
   };
 
   // 링크 공유하기
-  const shareLink = () => {};
+  const shareLink = () => {
+    navigator.clipboard.writeText("https://jindanpolicy.netlify.app/");
+    alert("링크가 클립보드에 복사되었습니다");
+  };
+
   useEffect(() => {
     let ChoicedCandidate: IChoicedCandidate = {
       이재명: 0,
@@ -283,83 +319,78 @@ const ResultPage = () => {
 
   return (
     <Container>
-      {userChoice !== null ? (
-        <>
-          <CandidateImg>
-            <ResultName>{selector}</ResultName>
-            <ResultSupport>공약 지지율 : {selectorPer}%</ResultSupport>
-            <ShareBtnBox>
-              <button onClick={shareKakao}>
-                <img
-                  src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-                  alt="카카오링크 보내기 버튼"
-                />
-              </button>
-              <button onClick={shareLink}>🔗</button>
-            </ShareBtnBox>
-            <ResultBoxes
-              // 반응형
-              style={{
-                gridTemplateRows: `repeat(${
-                  selectedData.length % 2 !== 0
-                    ? selectedData.length / 2 + 1
-                    : selectedData.length / 2
-                }, 1fr)`,
-              }}
-            >
-              {selectedData.map((data: ISelectedData) => (
-                <ResultCard key={data.id}>
-                  <h3>{data.id} 부문</h3>
-                  {candidate.map((pick) =>
-                    pick.part === data.id ? (
-                      <>
-                        <span key={pick.part}>
-                          나의 원픽 :{pick.freCandidate}
-                        </span>
-                        <ResultCardImg
-                          bgPhoto={`image/${pick.freCandidate}.png`}
-                        ></ResultCardImg>
-                      </>
-                    ) : null
-                  )}
-                </ResultCard>
-              ))}
-            </ResultBoxes>
-          </CandidateImg>
-          <MyResultBox>
-            <h2>📝나의 답변 현황</h2>
-            <h4>클릭하시면 정책 관련 사이트로 연결됩니다</h4>
-            <MyAnswer>
-              {userChoice.map((choice: any) => (
-                <li key={choice.answer}>
-                  {choice.link !== "" && (
-                    <>
-                      <h3>📌</h3>
-                      <h3>
-                        <a href={choice.link}>{choice.answer}</a>
-                      </h3>
-                    </>
-                  )}
-                </li>
-              ))}
-            </MyAnswer>
-            <h4
-              style={{
-                fontFamily: "MaruBuri-Regular",
-                fontWeight: "bold",
-              }}
-            >
-              본 테스트에 기재된 모든 텍스트들은 실시간으로 변화하는 후보들의
-              정책 방향을 반영하지 않습니다. 따라서 열람 시각에 따라 사실관계가
-              다를 수 있으니 이점 참고하시어 재미로만 테스트에 임해주시면
-              감사하겠습니다.
-            </h4>
-          </MyResultBox>
-          {/* <img src={심상정} alt="" /> */}
-        </>
-      ) : (
-        <h1>다시 테스트하기</h1>
-      )}
+      {/* <BigImg bgPhoto={`image/${selector}2.png`}></BigImg> */}
+      {/* <ImgCover>
+        <Img src={`image/${selector}2.png`}></Img>
+      </ImgCover> */}
+
+      <CandidateImg>
+        <ResultName>{selector}</ResultName>
+        <ResultSupport>공약 지지율 : {selectorPer}%</ResultSupport>
+        <ShareBtnBox>
+          <button onClick={shareKakao}>
+            <img
+              src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+              alt="카카오링크 보내기 버튼"
+            />
+          </button>
+          <button onClick={shareLink}>🔗</button>
+        </ShareBtnBox>
+        <ResultBoxes
+          // 반응형
+          style={{
+            gridTemplateRows: `repeat(${
+              selectedData.length % 2 !== 0
+                ? selectedData.length / 2 + 1
+                : selectedData.length / 2
+            }, 1fr)`,
+          }}
+        >
+          {selectedData.map((data: ISelectedData) => (
+            <ResultCard key={data.id}>
+              <h3>{data.id} 부문</h3>
+              {candidate.map((pick) =>
+                pick.part === data.id ? (
+                  <>
+                    <span key={pick.part}>나의 원픽 :{pick.freCandidate}</span>
+                    <ResultCardImg
+                      bgPhoto={`image/${pick.freCandidate}.png`}
+                    ></ResultCardImg>
+                  </>
+                ) : null
+              )}
+            </ResultCard>
+          ))}
+        </ResultBoxes>
+      </CandidateImg>
+      <MyResultBox>
+        <h2>📝나의 답변 현황</h2>
+        <h4>클릭하시면 정책 관련 사이트로 연결됩니다</h4>
+        <MyAnswer>
+          {userChoice.map((choice: any) => (
+            <li key={choice.answer}>
+              {choice.link !== "" && (
+                <>
+                  <h3>📌</h3>
+                  <h3>
+                    <a href={choice.link}>{choice.answer}</a>
+                  </h3>
+                </>
+              )}
+            </li>
+          ))}
+        </MyAnswer>
+        <h4
+          style={{
+            fontFamily: "MaruBuri-Regular",
+            fontWeight: "bold",
+          }}
+        >
+          본 테스트에 기재된 모든 텍스트들은 실시간으로 변화하는 후보들의 정책
+          방향을 반영하지 않습니다. 따라서 열람 시각에 따라 사실관계가 다를 수
+          있으니 이점 참고하시어 재미로만 테스트에 임해주시면 감사하겠습니다.
+        </h4>
+      </MyResultBox>
     </Container>
   );
 };
