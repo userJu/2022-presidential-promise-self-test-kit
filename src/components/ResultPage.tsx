@@ -230,14 +230,15 @@ const ResultPage = () => {
 
   // 링크 공유하기
   const shareLink = async () => {
-    await navigator.clipboard
-      .writeText("https://jindanpolicy.netlify.app/")
-      .then(() => {
-        alert("링크가 클립보드에 복사되었습니다");
-      })
-      .catch(() => {
-        alert("링크가 복사되지 않았습니다");
-      });
+    try {
+      await navigator.clipboard
+        .writeText("https://jindanpolicy.netlify.app/")
+        .then(() => {
+          alert("링크가 클립보드에 복사되었습니다.");
+        });
+    } catch (error) {
+      alert("다시 시도해주세요.");
+    }
   };
 
   useEffect(() => {
