@@ -204,12 +204,6 @@ const ResultPage = () => {
   }, []);
 
   // 카카오톡 공유하기
-  useEffect(() => {
-    window.Kakao.init(process.env.REACT_APP_JAVASCRIPT_KEY);
-    window.Kakao.isInitialized();
-  }, []);
-
-  // 카카오톡 공유하기
   const shareKakao = () => {
     window.Kakao.Link.sendCustom({
       templateId: 72020,
