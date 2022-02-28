@@ -72,7 +72,7 @@ interface IPromises {
 
 interface IUserChoice {
   answer: string;
-  candidate: string;
+  candidate: string[];
   link: string;
 }
 

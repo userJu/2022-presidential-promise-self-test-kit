@@ -177,7 +177,7 @@ interface ISelectedData {
 }
 interface ICand {
   answer: string;
-  candidate: string;
+  candidate: string[];
   part: string;
   link: string;
 }
@@ -198,16 +198,16 @@ interface IOnepick {
 
 const ResultPage = () => {
   const location = useLocation();
-  const navigate = useNavigate();
   const state: any = location.state;
   const userChoice = state.userChoice;
   const selectedData = state.selectedData;
   const [selector, setSelector] = useState("");
   const [selectorPer, setSelectorPer] = useState("");
+  // 당첨된 후보자
   const [candidate, setCandidate] = useState<
     { part: string; freCandidate: string }[]
   >([]);
-
+  console.log(userChoice);
   //원래는 click으로 하려고 했음
   // const onePickClick = (e: React.MouseEvent<HTMLDivElement>) => {
   // const part = e.currentTarget.dataset.value;
@@ -271,26 +271,28 @@ const ResultPage = () => {
       userChoice.forEach((cand: ICand) => {
         // 원픽 부분 설정하기.
         if (cand.part === selectedData[i].id) {
-          obj[cand.candidate] = (obj[cand.candidate] || 0) + 1;
+          console.log(cand.candidate);
+          cand.candidate.map((c: any) => (obj[c] = (obj[c] || 0) + 1));
         }
-        // console.log(obj); // 잘 나온다
-        switch (cand.candidate) {
-          case "이재명":
-            ChoicedCandidate.이재명 = ChoicedCandidate.이재명 + 1;
-            break;
-          case "윤석열":
-            ChoicedCandidate.윤석열 = ChoicedCandidate.윤석열 + 1;
-            break;
-          case "심상정":
-            ChoicedCandidate.심상정 = ChoicedCandidate.심상정 + 1;
-            break;
-          case "안철수":
-            ChoicedCandidate.안철수 = ChoicedCandidate.안철수 + 1;
-            break;
-          case "없음":
-            ChoicedCandidate.없음 = ChoicedCandidate.없음 + 1;
-            break;
-        }
+        cand.candidate.map((c: any) => {
+          switch (c) {
+            case "이재명":
+              ChoicedCandidate.이재명 = ChoicedCandidate.이재명 + 1;
+              break;
+            case "윤석열":
+              ChoicedCandidate.윤석열 = ChoicedCandidate.윤석열 + 1;
+              break;
+            case "심상정":
+              ChoicedCandidate.심상정 = ChoicedCandidate.심상정 + 1;
+              break;
+            case "안철수":
+              ChoicedCandidate.안철수 = ChoicedCandidate.안철수 + 1;
+              break;
+            case "없음":
+              ChoicedCandidate.없음 = ChoicedCandidate.없음 + 1;
+              break;
+          }
+        });
       });
       const frequency: number[] = Object.values(obj);
       const freCandidate = Object.keys(obj).find((key: string) => {

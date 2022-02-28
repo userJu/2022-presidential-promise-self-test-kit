@@ -8,31 +8,31 @@
           "answerList": [
             {
               "answer": "311만호 공급, 이 중 140만호 공공주택으로 공급, 수도권 중심으로 258만호 보급",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "경제",
               "link": "https://www.jmleetogether.com/web/center_view.php?code=188"
             },
             {
               "answer": "250만호 공급, 이 중 50만호로 공공주택으로 공급, 수도권 중심으로 130만호 공급",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "경제",
               "link": "https://www.wikiyoon.com/69ca5d97-10c1-453b-8b8f-901c6bcdcbd4"
             },
             {
               "answer": "200만호 공급, 200만호 모두 공공택지에서 공공주택으로",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "경제",
               "link": "http://www.xn--hg4br3bj9g.com/home/post_view.php?nd=2906"
             },
             {
               "answer": "250만호 공급, 이 중 50만호로 공공주택으로 공급",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "경제",
               "link": "https://ahnflix.kr/videoMain/selectVideoDetail?videoNum=77&videoCd=policy"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "경제",
               "link": ""
             }
@@ -43,31 +43,31 @@
           "answerList": [
             {
               "answer": "DSR 기준 완화 ‘산정시 미래소득까지 인정’, LTV 최대 90%까지 확대",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "경제",
               "link": "https://biz.chosun.com/policy/politics/election2022/2022/02/20/LGLGNLBE6JDP5CTH2SXCH73PLA/?utm_source=naver&utm_medium=original&utm_campaign=biz"
             },
             {
               "answer": "DSR 기준 완화, ‘현행 40%보다 더 높게’ 생애 최초 주택구입자를 대상으로 LTV를 최대 80%까지 인정",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "경제",
               "link": "https://biz.newdaily.co.kr/site/data/html/2022/02/24/2022022400130.html"
             },
             {
               "answer": "DSR 기준 완화는 ‘약탈적 대출’로 이어질 우려가 있음. 은행권과 제2금융권 DSR 기준 일원화. LTV 관련 언급 없음.",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "경제",
               "link": "http://www.xn--hg4br3bj9g.com/home/download.php?_dc=1"
             },
             {
               "answer": "DSR 기준 완화 ‘산정시 미래소득까지 인정’ LTV 80% 완화 및 기준금리 수준의 이자와 15년 거치·30년 상환",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "경제",
               "link": "https://www.edaily.co.kr/news/read?newsId=03650646632230520&mediaCodeNo=257&OutLnkChk=Y"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "경제",
               "link": ""
             }
@@ -78,31 +78,31 @@
           "answerList": [
             {
               "answer": "종부세 개편(다주택자 예외 조항 추가), 양도세 개편(중과 유예 1년)",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "경제",
               "link": "https://theminjoo.kr/board/view/electionpromises/721495?ca=79"
             },
             {
               "answer": "종부세 폐지(종부세·재산세 통합하거나 폐지), 양도세 개편(중과 유예 2년)",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "경제",
               "link": "https://www.donga.com/news/Politics/article/all/20211115/110243082/1"
             },
             {
               "answer": "종부세 강화(토지분 별도합산 종부세 0.7%에서 1.6%으로 강화) 양도세 강화(양도세 비과세 제한)",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "경제",
               "link": "https://www.justice21.org/newhome/board/board_view.html?num=146447&page=1"
             },
             {
               "answer": "종부세 대폭개편(재산세와 통합, 인하) 양도세 단계적 인하",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "경제",
               "link": "https://magazine.hankyung.com/business/article/202202181884b"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "경제",
               "link": ""
             }
@@ -113,31 +113,31 @@
           "answerList": [
             {
               "answer": "주식 장기보유자 대상 양도세 우대세율 적용. 공매도 차별금지. 주가조작 원스트라이크 아웃제. 물적분할 시 자회사주식 모회사 주주 우선 배정,",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "경제",
               "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
             },
             {
               "answer": "주식양도세 폐지. 공매도 감시체계 강화(서킷브레이커 도입). 물적분할 자회사 상장제한. 물적분할 시 자회사주식 모회사 주주 우선 배정",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "경제",
               "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
             },
             {
               "answer": "양도세 비과세 기준 2500만원으로 하향 (양도세강화). 주주대표소송 요건 완화. 계열분리·기업분할 명령제 도입",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "경제",
               "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
             },
             {
               "answer": "모든 공매도 감독. 연기금 주식 공매도용 대여 금지. 물적분할 상장 금지",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "경제",
               "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "경제",
               "link": ""
             }
@@ -148,31 +148,31 @@
           "answerList": [
             {
               "answer": "가상화폐 과세시기 늦춘다. 가상자산 투자수익 비과세 기준 5000만원까지 상향(완화), 가상자산 손실 5년간 이월 공제. ICO(가상화폐 개발을 위한 자금조달) 허용",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "경제",
               "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
             },
             {
               "answer": "가상화폐 과세시기 늦춘다. 가상자산 투자수익 비과세 기준 5000만원까지 상향(완화), 디지털산업진흥청 설치. 가상화폐 부당수익 전액 환수",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "경제",
               "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
             },
             {
               "answer": "내년부터 가상화폐 과세한다. 가상자산 투자수익 비과세 기준 250만원 현행 유지",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "경제",
               "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
             },
             {
               "answer": "가상자산 거래소 정보공시 의무화",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "경제",
               "link": "https://www.donga.com/news/article/all/20220217/111846866/1"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "경제",
               "link": ""
             }
@@ -188,25 +188,25 @@
           "answerList": [
             {
               "answer": "공공기관이 정원의 5%를 청년으로 고용, 국민내일배움카드 지원액을 600만~1000만 원으로 상향.  이력서에 학력·성별 등을 못 쓰게 하는 공정 채용 제도를 확대",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "일자리",
               "link": "https://newneek.co/post/ddUjn0/"
             },
             {
               "answer": "채용비리 확인 시 채용 취소. 고용세습 철폐B",
-              "candidate": "윤석열,안철수",
+              "candidate": ["윤석열", "안철수"],
               "part": "일자리",
               "link": "https://newneek.co/post/ddUjn0/"
             },
             {
               "answer": "청년 위한 긴급 일자리 1년에 10만개 마련. 자발적 퇴사 3회까지 구직급여 지급.",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "일자리",
               "link": "https://newneek.co/post/ddUjn0/"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "일자리",
               "link": ""
             }
@@ -217,25 +217,25 @@
           "answerList": [
             {
               "answer": "강화",
-              "candidate": "이재명,심상정",
+              "candidate": ["이재명", "심상정"],
               "part": "일자리",
               "link": "https://newneek.co/post/VMMYgj/"
             },
             {
               "answer": "완화",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "일자리",
               "link": "https://newneek.co/post/VMMYgj/"
             },
             {
               "answer": "불분명",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "일자리",
               "link": "https://newneek.co/post/VMMYgj/"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "일자리",
               "link": ""
             }
@@ -246,31 +246,31 @@
           "answerList": [
             {
               "answer": "상병수당 더 빠르게 도입. 주 52시간보다 줄이자. 주 4.5일제 추진",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "일자리",
               "link": "https://newneek.co/post/VMMYgj/"
             },
             {
               "answer": "상병수당 언급 없음. 주 52시간보다 늘리자 3~6개월 근무시간 평균 값 적용",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "일자리",
               "link": "https://newneek.co/post/VMMYgj/"
             },
             {
               "answer": "상병수당 상병수당 더 빠르게 도입 주 52시간보다 줄이자. 주 4일제 추진",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "일자리",
               "link": "https://newneek.co/post/VMMYgj/"
             },
             {
               "answer": "상병수당 건강 보험 재정상 어렵다. 주 52시간보다 늘리자.",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "일자리",
               "link": "https://newneek.co/post/VMMYgj/"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "일자리",
               "link": ""
             }
@@ -281,19 +281,19 @@
           "answerList": [
             {
               "answer": "비정규직 수당도입, 정규직 고용 확대 유도",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "일자리",
               "link": "https://newneek.co/post/VMMYgj/"
             },
             {
               "answer": "비정규직 제도 대거 개편, '고임금자 임금제한법' 제정. 1년 미만 근무자 퇴직금 지급",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "일자리",
               "link": "https://newneek.co/post/VMMYgj/"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "일자리",
               "link": ""
             }
@@ -304,31 +304,31 @@
           "answerList": [
             {
               "answer": "135조 원을 투자해 디지털 인프라 조성. 탄소중립 신기술 개발 등으로 일자리 300만 개 창출. 50조 규모의 펀드로 창업 유도해 중소기업과 유니콘 기업이 창출",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "일자리",
               "link": "https://newneek.co/post/ddUjn0/"
             },
             {
               "answer": "바이오·IT 등 신산업 생태계를 만들어 일자리 창출, 경쟁력 있는 중소기업을 지원. 규제 완화로 민간이 일자리 창출 유인. 스톡옵션 비과세 한도를 2억 원까지 올려 중소기업의 인재영입 도모",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "일자리",
               "link": "https://newneek.co/post/ddUjn0/"
             },
             {
               "answer": "재생에너지·전기차 등 5대 녹색산업 분야에서 일자리 150만 개 창출. 지역별 에너지 중소기업 일자리 30만 개, 오래된 건물 리모델링 작업으로 10만 개 등 창출",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "일자리",
               "link": "https://newneek.co/post/ddUjn0/"
             },
             {
               "answer": "2조 원 규모의 펀드로 디스플레이·2차 전지·소형 원전(SMR)·수소에너지·바이오산업에서 5가지 초격차 기술을 확보 후 관련 인재 50만 명 야엉. 삼성전자 급의 글로벌 기업을 5개 양성.",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "일자리",
               "link": "https://newneek.co/post/ddUjn0/"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "일자리",
               "link": ""
             }
@@ -344,31 +344,31 @@
           "answerList": [
             {
               "answer": "원자력 발전 중단(신규건설 없고 노후된 건 폐지), 2030년까지 재생에너지 비율 30%까지 늘리겠다.",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "환경",
               "link": "https://newneek.co/post/vViGhl/"
             },
             {
               "answer": "신한울 3·4호기 재개. 원자력 발전소 신규 건설. 소형모듈 원전 기술 개발. 2030년 중반까지 재생에너지 비율 30%까지 늘리겠다.",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "환경",
               "link": "https://newneek.co/post/vViGhl/"
             },
             {
               "answer": "2040년까지 탈핵. 2030년까지 재생에너지 비율 50%까지 늘리겠다.",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "환경",
               "link": "https://newneek.co/post/vViGhl/"
             },
             {
               "answer": "신한울 3·4호기 재개. 기존 원자력 발전소 수명 연장. 소형모듈 원전 기술 개발. 2030년까지 신재생 에너지 비율 35%까지 늘리겠다. ",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "환경",
               "link": "https://www.ahnflix.kr/videoMain/selectVideoList?videoCd=policy&videoCtg=nuclear"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "환경",
               "link": ""
             }
@@ -379,31 +379,31 @@
           "answerList": [
             {
               "answer": "친환경 디자인 규정 제정. 무라벨 제품 제작지원. 일회용품 재질 단일화. 캔·페트병 수거기 설치. 노후 건설장비 무공해 전환 추진",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "환경",
               "link": "https://gongyak.kr/"
             },
             {
               "answer": "신축 건물에 음식물 분쇄기 설치를 통해 바이오가스 활용. 폐플라스틱 재활용 방안 마련(열분해 처리방식).",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "환경",
               "link": "https://www.wikiyoon.com/c7700eb5-aae0-48a1-8451-f070a577b126"
             },
             {
               "answer": "생활 폐기물 100% 직공영화. 민간위탁을 하지 못하도록 ‘폐기물관리법’을 개정",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "환경",
               "link": "https://www.wikiyoon.com/c7700eb5-aae0-48a1-8451-f070a577b126"
             },
             {
               "answer": "폐기물 공공이 수거, 민간이 재활용 방식 채택. 재활용 기술 개발 지원",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "환경",
               "link": "https://newneek.co/post/vViGhl/"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "환경",
               "link": ""
             }
@@ -414,31 +414,31 @@
           "answerList": [
             {
               "answer": "탄소중립 2040년으로 앞당기자. 탄소세 도입 찬성.",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "환경",
               "link": "https://newneek.co/post/FtzuHB/"
             },
             {
               "answer": "목표에는 동의, 방법은 바뀌어야 한다.",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "환경",
               "link": "https://newneek.co/post/FtzuHB/"
             },
             {
               "answer": "기후 위기 대응이 국가 제 1전략이 돼야 한다. 2030년까지 탄소중립 목표. 탄소세 도입 찬성",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "환경",
               "link": "https://newneek.co/post/FtzuHB/"
             },
             {
               "answer": "탄소중립은 현실적으로 불가능하다. 석탄 발전소 관리에 더욱 신경 쓰자. 탄소세 도입 반대",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "환경",
               "link": "https://www.ahnflix.kr/videoMain/selectVideoDetail?videoNum=69&videoCd=policy"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "환경",
               "link": ""
             }
@@ -449,31 +449,31 @@
           "answerList": [
             {
               "answer": "공공기관(특히 초·중·고등학교) 급식에 채식 선택권 보장. 개식용 금지. 비건 문화 확산 지원. 국가채식인증시스템 채식식당인증제 도입",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "환경",
               "link": "https://www.hani.co.kr/arti/politics/politics_general/1025709.html"
             },
             {
               "answer": "육식과 채식 이분법 접근 반대. 육류 소비를 줄이기보다는 좋은 고기를 먹을 수 있도록 하겠다.",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "환경",
               "link": "https://www.hani.co.kr/arti/politics/politics_general/1025709.html"
             },
             {
               "answer": "공공기관 월 4회 채식식단 제공 의무화. 학교급식 채식 식단 확대. 우유·두유 선택권 부여. 육류 소비 줄일 수 있는 문화 조성",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "환경",
               "link": "https://www.hani.co.kr/arti/politics/politics_general/1025709.html"
             },
             {
               "answer": "채식인 존중. 식습관은 개개인의 선택의 문제",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "환경",
               "link": "https://www.hani.co.kr/arti/politics/politics_general/1025709.html"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "환경",
               "link": ""
             }
@@ -484,31 +484,31 @@
           "answerList": [
             {
               "answer": "반려동물 진료비 표준수가제(정확한 보험율 산정) 도입. 반려동물 보험 가입 간소화. 경찰·정부동물학대 방지 전담부서 신설. 개 식용금지법 단계적 추진.",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "환경",
               "link": "https://newneek.co/post/wTsjNN/"
             },
             {
               "answer": "반려동물 진료비 표준수가제 도입. 동물 진료비 소득공제. 반려동물 장례시설 설치. 유기동물 분양 시스템 구축.",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "환경",
               "link": "https://newneek.co/post/wTsjNN/"
             },
             {
               "answer": "반려동물 진료비 표준수가제 도입. 동물 진료비 소득공제. 반려동물 보험 가입 간소화. 지자체별 동물 장례식장 건설. 반려동물 이력제. 공공 동물보호센터 중심으로 입양·교육 지원. 동물복지법으로 개편. 번식장 단계적 폐쇄. 개 식용 금지. 동물학대 처벌 강화",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "환경",
               "link": "https://newneek.co/post/wTsjNN/"
             },
             {
               "answer": "반려동물 진료비 표준수가제 도입. ‘번식 공장’ 단계적 폐쇄. 동물복지위원회 추진",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "환경",
               "link": "https://newneek.co/post/wTsjNN/"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "환경",
               "link": ""
             }
@@ -524,31 +524,31 @@
           "answerList": [
             {
               "answer": "육아휴식 쿼터제 도입(출산시 유아휴직 강제). 난임검사 기초 건강검진에 포함. 난임수술 약제비 건강보험 적용. 난임부부 정신건강 바우처 제공. 공공산후조리원 구축.",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "후생 발전",
               "link": "https://newneek.co/post/wWavyY/"
             },
             {
               "answer": "난임시술 지원 확대. 임신시 60만원 상당의 정신건강 바우처 제공. 산후우울증 지원. 육아휴직 기간 확대(부모합쳐 3년) 출생시 1년간 매월 100만원씩 지원. 양육수당 30만원으로 확대.",
-              "candidate": "윤석열,안철수",
+              "candidate": ["윤석열", "안철수"],
               "part": "후생 발전",
               "link": "https://newneek.co/post/wWavyY/"
             },
             {
               "answer": "육아휴직 기간 확대(부모 합쳐 2년) 육아휴직 의무화. 휴직 기간 중 수령 월급 인상. 1년 추가 수령. 육아휴직 적극 활용 기업에게 대체 인력 구인을 위한 인센티브 제공. 자영업자·플랫폼 노동자 등 특수 노동자 육아휴직 사용 가능토록 한다.",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "후생 발전",
               "link": "https://newneek.co/post/wWavyY/"
             },
             {
               "answer": "육아휴직 쓸 수 있는 환경 마련. 지역별 반값 공공산후조리원 구축.",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "후생 발전",
               "link": "https://newneek.co/post/wWavyY/"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "후생 발전",
               "link": ""
             }
@@ -559,31 +559,31 @@
           "answerList": [
             {
               "answer": "어린이집 교사 1인당 담당 아동 OECD 수준으로 줄이겠다(현행보다 평균 6명 줄여야함). 모든 초등생 3시 하교토록 수업 시간 확대. 공교육 내에서 7시 까지 온종일 돌봄 도입. 하굣길 교통안전 담당자 채용. 아동 급식카드 제도 개선. ",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "후생 발전",
               "link": "https://newneek.co/post/wWavyY/"
             },
             {
               "answer": "자녀 한명당 한 학기에 1일 추가연차 제공. 만 5세까지 무상보육. 초등학교 온종일 돌봄 교실 운영. 모든 초등생 무상급식 지원. 한부모 가족 지원 확대",
-              "candidate": "윤석열,안철수",
+              "candidate": ["윤석열", "안철수"],
               "part": "후생 발전",
               "link": "https://newneek.co/post/wWavyY/"
             },
             {
               "answer": "‘생애 주기별 노동시간 선택제’ 노동시간 단축, 유연화 실시. ‘돌봄자 수당’ 도입.",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "후생 발전",
               "link": "https://newneek.co/post/wWavyY/"
             },
             {
               "answer": "국공립 보육시설 확충. 오후 7시 까지 온종일 돌봄 서비스 도입.",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "후생 발전",
               "link": "https://newneek.co/post/wWavyY/"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "후생 발전",
               "link": ""
             }
@@ -594,31 +594,31 @@
           "answerList": [
             {
               "answer": "대입공정성위원회 설치(수시전형 공정성 강화). 공공입학사정관제 도입. 수능 초고난도 문항 출제 금지. 지역대학 혁신법인 설립 및 공유대학·연합대학 추진. 한국형 대학원 공유체제 구축. 지역대학, 평생학습시민대학 플랫폼 신설",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "후생 발전",
               "link": "http://www.kyosu.net/news/articleView.html?idxno=85270"
             },
             {
               "answer": "새로운 대입제도. 대학평가제 개선. 고등교육 재정지원 확대. 특성화고·전문대 고숙련 전문인재 양성 지원(신산업 직업교육 체제·교육과정 개편)",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "후생 발전",
               "link": "http://www.kyosu.net/news/articleView.html?idxno=85270"
             },
             {
               "answer": "서울대 10개 만들기(거점국립대 육성). 대학통합네트워크(공동학위제) 구축. 미래대학(지방대 우선 지정). '고등교육재정교부금법' 제정. 대학 무상교육(전문대, 국공립대 우선 시행). 고등평생직업교육기관 육성을 위한 전문대 재정 지원 확대",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "후생 발전",
               "link": "http://www.kyosu.net/news/articleView.html?idxno=85270"
             },
             {
               "answer": "수시 전면 폐지하고 수능 연 2회(7·10월) 실시. 교육부 폐지. 대학·연구분야, 총리실 담당. 사립대 등록금 자율화. 지역거점 평생교육기관으로서 지방대 재정 지원.",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "후생 발전",
               "link": "http://www.kyosu.net/news/articleView.html?idxno=85270"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "후생 발전",
               "link": ""
             }
@@ -629,31 +629,31 @@
           "answerList": [
             {
               "answer": "학부생 100% 취업 후 상환 학자금 이용. (대학원생은 소득하위 48%까지 이용가능) 대출상환 유예제도(가족부양의 의무가 있을 경우)",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "후생 발전",
               "link": "https://theminjoo.kr/board/view/electionpromises/707171"
             },
             {
               "answer": "지역 거점 대학의 1인당 교육비 투자를 상위 국립대 수준까지 증액. 국가 장학금 지원 확대",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "후생 발전",
               "link": "https://www.wikiyoon.com/89c5bf5b-75ff-498c-be3f-3aef2bb74a61"
             },
             {
               "answer": "한국장학재단 학자금 대출 원리금 50%탕감. 학자금 무이자 대출 실시. 인구감소 추이에 따라 대학 완전 무상 교육 실시",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "후생 발전",
               "link": "https://www.edaily.co.kr/news/read?newsId=01830246615892184&mediaCodeNo=257&OutLnkChk=Y"
             },
             {
               "answer": "대학 졸업 자격 기반의 자격시험 폐지. 연구개발비 GDP 5%까지 확대. 5대 초격차 과학기술분야(디스플레이, 이차전지, 모듈원전, 수소에너지, 바이오)를 위한 특성화 고교·대학 설립해 50만명 인재 양성",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "후생 발전",
               "link": "https://www.ppomppu.co.kr/zboard/view.php?id=news_pol_eco&no=279131"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "후생 발전",
               "link": ""
             }
@@ -664,31 +664,31 @@
           "answerList": [
             {
               "answer": "연 100만원 기본소득 지급. 1000만원 기본 대출. 신규주택 공급물량 30% 청년 우선 배정. 마음건강 바우처 지원확대. 청년문화예술인 5년간 창작지원. 공짜노동(열정페이) 근절. 연간 생활비 대출 현행 300만원에서 500만원으로 확대",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "후생 발전",
               "link": "https://theminjoo.kr/board/view/electionpromises/730286"
             },
             {
               "answer": "청년원 가구주택 30만호 공급. 역세권 첫 집 주택 20만호 공급. 불합리한 청약제도 개선. ‘청년 도약계좌’도입(1억원 묵돈 마련 저축) 청년 대상 저리 주담대·전세대출 확대.",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "후생 발전",
               "link": "https://www.wikiyoon.com/44a96e2c-42b9-4cde-b01f-dc1fbf5f2f7e"
             },
             {
               "answer": "300만원 이내 소액긴급대출. 청년 생계비 ‘햇살론 유스’ 만기 연장. ‘청년생활금융상담센터’ 설립. 중위소득 120% 월 20만원 3년간 지원. 전세보증금 무이자 대출. ‘청년 공공임대주택 공급’(전세보증금X).",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "후생 발전",
               "link": "https://newsis.com/view/?id=NISX20211213_0001685566&cID=10301&pID=10300"
             },
             {
               "answer": "도심 초고층 주상복합 청년 캠퍼스 증축. 토지 임대부 청년 안심주택(50만호 반값에 공급). 기준금리 수준의 45년 초 장기 모기지 도입. ‘공적 연금 개혁’ 4대 국민연금(국민·공무원·군인·사학) 통합으로 현 청년들의 연금 수급 통로 확보. ",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "후생 발전",
               "link": "https://www.ahnflix.kr/videoMain/selectVideoDetail?videoNum=127&videoCd=policy"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "후생 발전",
               "link": ""
             }
@@ -704,31 +704,31 @@
           "answerList": [
             {
               "answer": "추가배치 반대.",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "국방",
               "link": "https://newneek.co/post/QWWtcb/"
             },
             {
               "answer": "추가배치 하겠다.",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "국방",
               "link": "https://newneek.co/post/QWWtcb/"
             },
             {
               "answer": "사드 철수",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "국방",
               "link": "http://www.xn--hg4br3bj9g.com/home/download.php?_dc=1"
             },
             {
               "answer": "한국형 미사일방어체계 완성 후 사드배치 검토",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "국방",
               "link": "https://www.yna.co.kr/view/AKR20220214091800053?input=1195m"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "국방",
               "link": ""
             }
@@ -739,31 +739,31 @@
           "answerList": [
             {
               "answer": "북한과 종전 선연. 한미 포괄적 동맹(국방+경제)으로 강화. ‘전시작전통제권’ 임기 내 환수. 미·중 어느 한쪽 편향X.",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "국방",
               "link": "https://newneek.co/post/QWWtcb/"
             },
             {
               "answer": "종전 선언 반대(북한 비핵화시 ‘평화 협정’). 전시작전통제권 회수는 시기상조. 한미 포괄적 동맹 강화. 미국 우선주의. ",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "국방",
               "link": "http://www.segye.com/newsView/20220201506567?OutUrl=naver"
             },
             {
               "answer": "남북미중 4자 평화 선언 추진. 대북 제재 완화. 남북 경제 협력 재개.",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "국방",
               "link": "http://www.segye.com/newsView/20220201506567?OutUrl=naver"
             },
             {
               "answer": "북한 비핵화 후 북미수교가 우선. 북한 정상국가화 적극지원. 미국 우선주의.",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "국방",
               "link": "https://newneek.co/post/QWWtcb/"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "국방",
               "link": ""
             }
@@ -774,31 +774,31 @@
           "answerList": [
             {
               "answer": "선택적 모병제(징집병과 기술집약형 전투부사관 중 선택 지원), 사병 월급 2027년 200만원 수준. 사병 통신비 반값 혜택. 취업준비 지원. 전역시 목돈 마련. ",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "국방",
               "link": "https://newneek.co/post/QWWtcb/"
             },
             {
               "answer": "2040년까지 병력 30만명까지 축소. 나머지 자리는 무인·로봇 전투요원으로 대체. 취임 즉시 사병 월급 200만원으로 인상. 전역자 주택청약 가점. 사병 전용 이동형 원격진료 확대.",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "국방",
               "link": "https://newneek.co/post/QWWtcb/"
             },
             {
               "answer": "2030년까지 완전 모병제. 30만명 정도 유지. 직업 예비군제(1개월~3개월 복무)도입. 사병 월급 2030년의 최저임금만큼 지급. 민간 병원 방문 위한 휴가 지원. 휴대폰 완전 자율화. 간부 주택·당직수당 증액.",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "국방",
               "link": "https://newneek.co/post/QWWtcb/"
             },
             {
               "answer": "준모병제(병력 45만명으로 축소 이중 전문부사관 50%까지 모집). 전역시 1000원 일괄지급.",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "국방",
               "link": "https://newneek.co/post/QWWtcb/"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "국방",
               "link": ""
             }
@@ -814,25 +814,25 @@
           "answerList": [
             {
               "answer": "사회적 합의가 필요함.",
-              "candidate": "이재명, 안철수",
+              "candidate": ["이재명", "안철수"],
               "part": "성평등",
               "link": "https://newneek.co/post/Fbd7mP/"
             },
             {
               "answer": "자유를 침해하므로 반대.",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "성평등",
               "link": "https://newneek.co/post/Fbd7mP/"
             },
             {
               "answer": "반드시 제정할 것.",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "성평등",
               "link": "https://newneek.co/post/Fbd7mP/"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "성평등",
               "link": ""
             }
@@ -843,31 +843,31 @@
           "answerList": [
             {
               "answer": "장애인등록제 폐지. 특별교통수단지원으로 이동권 보장. 발달·정신장애인 24시간 지원. 장애인 공공주택 공급확대. 장애인연금 확대. 대통령 직속 ‘국가장애인위원회’ 설립.",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "성평등",
               "link": "https://newneek.co/post/Fbd7mP/"
             },
             {
               "answer": "'개인예산제' 도입(정해진 예산 안에서 필요한 비용 소비), 발달지연 장애인 국가지원 강화. 4차 산업 관련 직업훈련 강화. 장애인학생 예술교육·창작활동 지원.",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "성평등",
               "link": "https://www.wikiyoon.com/47d716fe-9e28-4ff8-ba4a-d845161eba08"
             },
             {
               "answer": "장애인등록제 폐지. 가족책임 아닌 국가 책임. 장애인이 시설에서 벗어나 자립할 수 있도록 사회적 인프라 구축. ‘장애인권리보장법’ 제정. 중증장애인 24시간 지원체계 구축. 시내버스 100% 저상버스. 시외·고속 50% 저상 버스.",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "성평등",
               "link": "https://newneek.co/post/Fbd7mP/"
             },
             {
               "answer": "시내버스 저상버스 70%까지 확대. 장애인 콜택시 확대. 개인예산제 도입. 사물인터넷으로 장애인 안전 보장. 장애인 연금 지원조건 완화. 발달 장애인 국가책임제.",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "성평등",
               "link": "https://newneek.co/post/Fbd7mP/"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "성평등",
               "link": ""
             }
@@ -878,19 +878,19 @@
           "answerList": [
             {
               "answer": "권리 인정하나 동성혼은 사회적 합의가 필요함.",
-              "candidate": "이재명,윤석열,안철수",
+              "candidate": ["이재명", "윤석열", "안철수"],
               "part": "성평등",
               "link": "https://newneek.co/post/Fbd7mP/"
             },
             {
               "answer": "동성혼은 ‘합의’ 문제가 아님 당연한 권리임. 동성혼 법제화 추진.",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "성평등",
               "link": "https://newneek.co/post/Fbd7mP/"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "성평등",
               "link": ""
             }
@@ -901,31 +901,31 @@
           "answerList": [
             {
               "answer": "여성가족부 개편. 임신중절 건강보험 적용. 남녀 청소년 인유두종바이러스 무료접종. 여성 청소년 생리대 구입비 지원. 산부인과를 '여성건강의학과'로 변경. 여성과학기술인 경력단절 예방(생애주기별 맞춤형 지원체계). 여성 1인가구 주거 안전시설 확대. 결혼이주여성 젠더폭력 피해자 체류 보장. 북한이탈여성 위한 심리 치유 상담 지원. 군사관학교 여성 모집 비율 상향.",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "성평등",
               "link": "https://theminjoo.kr/board/view/electionpromises/707043"
             },
             {
               "answer": "여성 가족부 폐지. 무고죄 처벌 강화. ‘가정폭력처벌법’ 적용대상자 부부사이에서 연인사이까지 확대. 스토킹 가해자 스마트워치 착용의무화. 디지털성범죄 피해자지원센터 마련(영상물 삭제 지원). 피해자 일상회복 지원 원스톱 해결. 치유지원금 지급. 성별근로 공시제 도입",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "성평등",
               "link": "https://www.wikiyoon.com/cae0d7df-78bf-432b-b3c9-19f8da7e4c5e"
             },
             {
               "answer": "여성가족부 개편. ‘여성폭력기본법’을 ‘젠더 폭력방지법’으로 개정. 스토킹 처벌 강화. ‘비동의 강간죄’도입. 가정보호보다 피해자 보호. 징벌적 손해배상 제도조항에 성희롱 은폐 징계 조항 마련. 안전한 월경보장과. 여성 건강 종합 프로그램 구축(지역보건소, 공공병원과 연계), 여성건강 정책 전담부서 신설. 여성 성상품화 광고 규제 강화. 성평등 임금 공시제 도입. '성별임금격차해소법' 제정. 여성 맞춤형 통합취업지원 서비스 강화. 여성 안심주거 환경 실현(최저 주거 기준에 ‘안전기준’ 포함 법적 강제력 확보) 여성 공천권 30%에서 단계적 의무화. 모든 여성 청소년 생리대 무상 지원. 청소년 여성 임산부를 위한 지원 확충.",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "성평등",
               "link": "http://www.xn--hg4br3bj9g.com/home/post_view.php?nd=2918"
             },
             {
               "answer": "여성가족부 개편. 5년간 한기적으로 공공기관 정원 2%를 경력단절 여성으로 의무 고용(4만명 수준). 각부처 출산·육아 휴직자 대체 인력 50%를 경력 단절 여성으로 채용. 성착취 발생 디지털 플랫폼 책임강화(SNS 기업 징벌적 손해배상). 스토킹 처벌법 반의사 불벌죄 삭제. 18세 미만 청소년 대상 스토킹 가중처벌. 가해자 1km 접근금지 추진. 가정폭력처벌법 반의사 불벌죄 폐지. 상담조건부 기소유예제도 폐지. 처벌 기준 강화",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "성평등",
               "link": "https://peopleparty.krpolicy_dataroom/10"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "성평등",
               "link": ""
             }
@@ -941,31 +941,31 @@
           "answerList": [
             {
               "answer": "국민연금 가입 인정 기간 항목 확대(현행 : 군복무 6개월, 2자녀 출산붙터 12개월 인정) 일하는 노인 연금 감액 문제(일할수록 수령 연금액이 줄어드는 현상) 해결. 연금지급 전까지 장년수당 연 120만원 지원. 기초연금대상 점진적 확대 추진. 75세 이상 은퇴 농업인 ‘은퇴농 연금’지급 방안 모색. 모든 중증 장애인 연금 지급. 공적연금제도 개혁 ‘연금개혁위원회’ 운영.",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "노후",
               "link": "https://theminjoo.kr/board/view/electionpromises/747331"
             },
             {
               "answer": "기초연금 1인당 월 10만원, 부부기준 16만원 인상. 부부수령시 20%감액 규정 유지. 노인빈곤율 5% 포인트 가까이 완화.",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "노후",
               "link": "https://www.wikiyoon.com/f3b9ae1d-f8b3-49f5-bd8d-3dd4797a9eee"
             },
             {
               "answer": "자영업자 국민연금 지원. 국민연금 보험료율 인상. 특수직연금을 국민연금 방식으로 통합. 다층연금체계 구축(기초연금, 국민연금, 퇴직연금등 중장기연금체계 구축).",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "노후",
               "link": "http://www.xn--hg4br3bj9g.com/home/download.php?_dc=1"
             },
             {
               "answer": "2055년 고갈예정인 연기금 제도 전반적인 개혁이 필요함. 공무원연금과 국민연금간의 불평등 해소(257만>52만). 동일연금제 추진으로 세대간 형평성 확보",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "노후",
               "link": "https://www.ahnflix.kr/videoMain/selectVideoDetail?videoNum=72&videoCd=policy"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "노후",
               "link": ""
             }
@@ -976,31 +976,31 @@
           "answerList": [
             {
               "answer": "어르신 임플란트 56세부터 4개(현행 2개). 어르신 요양 돌봄 국가책임제. 돌봄매니저 채용. 어르신 일자리 현행 80만개에서 140만개로 확대. 평생 교육지원. 노인 1인가구 연대관계인 지정.",
-              "candidate": "이재명",
+              "candidate": ["이재명"],
               "part": "노후",
               "link": "https://www.jmleetogether.com/web/center_view.php?code=163"
             },
             {
               "answer": "가족 돌봄 휴가·휴직기간 확대 통해 간병 실직 문제 해결. 간병관련 정보 부족 해소. 요양병원 간병비 국민건강보험 급여화. 간호통합 서비스 확대",
-              "candidate": "윤석열",
+              "candidate": ["윤석열"],
               "part": "노후",
               "link": "https://www.wikiyoon.com/03f41980-9b0c-4de0-9110-6a713a7cb1d9"
             },
             {
               "answer": "‘지역사회 통합 돌봄’ 실현. 국공립 장기요양시설기관 확대. 공공실버아파트·실버원룸·실버자가로 맞춤형 노인주거 제공. 어르신 사회참여·일자리 개발. 의료급여 부양의무제 폐지",
-              "candidate": "심상정",
+              "candidate": ["심상정"],
               "part": "노후",
               "link": "http://www.xn--hg4br3bj9g.com/home/download.php?_dc=1"
             },
             {
               "answer": "손주돌봄 수당 손주 한명당 매달 20만원. 최대 40만원 지원. 조손가정에는 추가 지원. 고소득 노인 일자리 확대. 디지털 정보격차 해소. 인터넷 통신지원 확대. 스마트밴드 보급으로 어르신 건강 모니터링. 대상포진 무료 예방접종.",
-              "candidate": "안철수",
+              "candidate": ["안철수"],
               "part": "노후",
               "link": "https://peopleparty.kr/policy_dataroom/10"
             },
             {
               "answer": "관심 없는 항목이다",
-              "candidate": "없음",
+              "candidate": ["없음"],
               "part": "노후",
               "link": ""
             }
