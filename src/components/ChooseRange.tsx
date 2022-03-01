@@ -100,7 +100,6 @@ const Notice = styled.div`
 
 const ChooseRange = () => {
   const [promises, setPromises] = useState<string[]>([]);
-  const [alert, setAlert] = useState(false);
   const navigate = useNavigate();
   const bordersClick = (e: any) => {
     const {
@@ -117,11 +116,9 @@ const ChooseRange = () => {
     if (promises.length > 0) {
       navigate("/select_promise", { state: { promises } });
     } else {
-      console.log("아니 다시보라고!");
-      setAlert((prev) => !prev);
+      alert("관심있는 정책을 하나 이상 선택해 주세요.");
     }
   };
-  console.log(promises);
   // 이렇게 하려면 모든 div에 다 설정해야 한다
   // const borderClick = (e: React.MouseEvent<HTMLDivElement>) => {
   //   console.dir(e.currentTarget.innerText);
@@ -144,7 +141,6 @@ const ChooseRange = () => {
           <div title="기타">기타</div> */}
         </Borders>
       </MainBorder>
-      {alert && <h4>정책을 선택해주세요</h4>}
       <StartBtnBox>
         <h3>시작하기👉</h3>
         <Button onClick={startBtnClick}>

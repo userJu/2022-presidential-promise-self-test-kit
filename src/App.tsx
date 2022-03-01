@@ -80,17 +80,17 @@ span,li,h4{
 }
 @media screen and (min-width :500px){
   h1{
-  font-size:20px;
+  font-size:25px;
 }
 h2{
-  font-size:16px;
+  font-size:21px;
 }
 h3{
-  font-size:12px;
+  font-size:17px;
 }
 span,li,h4{
-  font-size:10px;
-  line-height:130%;
+  font-size:15px;
+  line-height:150%;
 }
 }
 `;
