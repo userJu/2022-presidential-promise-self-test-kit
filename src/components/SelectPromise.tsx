@@ -5,7 +5,7 @@ import promiseData from "../promiseData.json";
 
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,6 +53,17 @@ const Answer = styled.li`
     background-color: ${(props) => props.theme.colors.subBgColor};
   }
 `;
+
+const PrevBtn = styled.button`
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+  background-color: ${(props) => props.theme.colors.btnColor};
+  border: 1px solid ${(props) => props.theme.colors.subBgColor};
+  color: ${(props) => props.theme.colors.accentColorDarkPurple};
+  box-shadow: ${(props) => props.theme.shadow.clickedBtn};
+  padding: 5px 7px;
+  cursor: pointer;
+`;
 interface ILocation {
   promises: string[];
 }
@@ -99,8 +110,11 @@ const SelectPromise = () => {
   const qList = selectedData[order];
   const navigate = useNavigate();
   const [userChoice, setUserChoice] = useState<IUserChoice[]>([]);
+
   const answerClick = (e: React.MouseEvent<HTMLLIElement>) => {
     if (qList.questionList !== undefined) {
+      // 파트별로 진행되고 있는 문제의 수보다 현재 진행하고 있는 문제의 순서가 작으면
+      // answerClick을 했을 때 현재 진행하는 문제에 1을 더한다
       if (qList.questionList?.length - 1 > qNumber) {
         setQNumber((prev) => prev + 1);
       } else if (qList.questionList?.length - 1 === qNumber) {
@@ -110,13 +124,35 @@ const SelectPromise = () => {
       const choose = qList.questionList[qNumber].answerList.filter(
         (list) => list.answer === e.currentTarget.innerHTML
       );
-      if (userChoice === undefined) {
+      if (userChoice.length === 0) {
         setUserChoice([choose[0]]);
       } else {
         setUserChoice((prev) => [...prev, choose[0]]);
       }
     }
   };
+  console.log(order);
+  const prevBtnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (qList.questionList !== undefined) {
+      if (order === 0 && qNumber === 0) {
+        navigate("/");
+      } else {
+        if (qNumber === 0) {
+          setOrder((prev) => prev - 1);
+          console.log(order);
+          console.log(qList);
+          setQNumber(selectedData[order - 1].questionList.length - 1);
+        } else if (qNumber !== 0) {
+          setQNumber((prev) => prev - 1);
+        }
+      }
+      const deleteChoiceArr = [...userChoice];
+      deleteChoiceArr.pop();
+      setUserChoice([...deleteChoiceArr]);
+    }
+  };
+  console.log(selectedData);
+  console.log(userChoice);
 
   useEffect(() => {
     if (location.state === null) {
@@ -153,6 +189,7 @@ const SelectPromise = () => {
               </AnswerList>
             </QuestionBox>
           ) : null}
+          <PrevBtn onClick={prevBtnClick}>이전 문제로</PrevBtn>
         </>
       )}
     </Container>
