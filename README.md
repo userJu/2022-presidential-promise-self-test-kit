@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+# 2022 대선 공약 선호도 자가진단 키트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 목적
 
-## Available Scripts
+- 유저들이 '정책' 기반으로 선호 후보를 구분할 수 있도록 돕는데 있다.
+- 쉽고 간단하게 자가 진단 할 수 있도록 돕는다.
+- 사실 확인을 위해 유저가 선택한 정책 관련 문서를 결과 페이지에 추가한다.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- React 17
+- TypeScript
+- styled-components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 기능
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 관심있는 정책들을 중복 선택하여 테스트 할 수 있다.
+- 유저의 답변과 관련된 자료를 보여준다.
+- 문제 순서를 렌덤으로 섞어 특정 후보의 정책만을 선택할 수 없게 했다.
 
-### `npm test`
+## 스크린샷
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img width="80%" src="https://user-images.githubusercontent.com/87933367/163665488-aef3ce0e-b713-42df-b215-a54037cd8ede.PNG">
+<img width="80%" src="https://user-images.githubusercontent.com/87933367/163665546-6a801e8e-54d5-457d-9184-c3b0ce0f9178.PNG">
+<img width="80%" src="https://user-images.githubusercontent.com/87933367/163665555-27f2f9d5-9c88-44da-a104-fa85ba87128a.PNG">
+<img width="80%" src="https://user-images.githubusercontent.com/87933367/163665565-92c03c14-7c23-4479-b4ec-b21c864e08b6.PNG">
+<img width="80%" src="https://user-images.githubusercontent.com/87933367/163665570-a9bf185d-0974-4f44-86a8-29c613a595d7.PNG">
 
-### `npm run build`
+### 페이지 링크
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[2022 대선 공약 선호도 자가진단 키트](https://jindanpolicy.netlify.app/)
