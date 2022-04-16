@@ -20,11 +20,18 @@
 
 ## 스크린샷
 
-<img width="80%" src="https://user-images.githubusercontent.com/87933367/163665488-aef3ce0e-b713-42df-b215-a54037cd8ede.PNG">
-<img width="80%" src="https://user-images.githubusercontent.com/87933367/163665546-6a801e8e-54d5-457d-9184-c3b0ce0f9178.PNG">
-<img width="80%" src="https://user-images.githubusercontent.com/87933367/163665555-27f2f9d5-9c88-44da-a104-fa85ba87128a.PNG">
-<img width="80%" src="https://user-images.githubusercontent.com/87933367/163665565-92c03c14-7c23-4479-b4ec-b21c864e08b6.PNG">
-<img width="80%" src="https://user-images.githubusercontent.com/87933367/163665570-a9bf185d-0974-4f44-86a8-29c613a595d7.PNG">
+- 관심있는 정책들 중복 선택 페이지
+  <img width="80%" src="https://user-images.githubusercontent.com/87933367/163665488-aef3ce0e-b713-42df-b215-a54037cd8ede.PNG">
+
+- 선택 페이지
+  <img width="80%" src="https://user-images.githubusercontent.com/87933367/163665546-6a801e8e-54d5-457d-9184-c3b0ce0f9178.PNG">
+
+- 결과 페이지
+  <img width="80%" src="https://user-images.githubusercontent.com/87933367/163665555-27f2f9d5-9c88-44da-a104-fa85ba87128a.PNG">
+
+- 결과 페이지(나의 답변과 관련된 자료 보여주기)
+  <img width="80%" src="https://user-images.githubusercontent.com/87933367/163665565-92c03c14-7c23-4479-b4ec-b21c864e08b6.PNG">
+  <img width="80%" src="https://user-images.githubusercontent.com/87933367/163665570-a9bf185d-0974-4f44-86a8-29c613a595d7.PNG">
 
 ### 페이지 링크
 
