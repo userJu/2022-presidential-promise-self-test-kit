@@ -131,7 +131,6 @@ const SelectPromise = () => {
       }
     }
   };
-  console.log(order);
   const prevBtnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (qList.questionList !== undefined) {
       if (order === 0 && qNumber === 0) {
@@ -139,8 +138,6 @@ const SelectPromise = () => {
       } else {
         if (qNumber === 0) {
           setOrder((prev) => prev - 1);
-          console.log(order);
-          console.log(qList);
           setQNumber(selectedData[order - 1].questionList.length - 1);
         } else if (qNumber !== 0) {
           setQNumber((prev) => prev - 1);
@@ -151,8 +148,6 @@ const SelectPromise = () => {
       setUserChoice([...deleteChoiceArr]);
     }
   };
-  console.log(selectedData);
-  console.log(userChoice);
 
   useEffect(() => {
     if (location.state === null) {

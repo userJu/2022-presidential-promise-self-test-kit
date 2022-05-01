@@ -237,18 +237,6 @@ const ResultPage = () => {
       없음: 0,
     };
 
-    // 파트별 원픽 보여주기
-    // userChoice.map((choiced: any) => {
-    //   selectedData.map((data: any) => {
-    //     if (choiced.part === data.id) {
-    //       console.log(data.id, choiced.candidate);
-    //       setOnPick((prev) => [
-    //         ...prev,
-    //         { part: data.id, candidate: choiced.candidate },
-    //       ]);
-    //     }
-    //   });
-    // });
     let obj: any = {};
     for (let i = 0; i < selectedData.length; i++) {
       userChoice.forEach((cand: ICand) => {
@@ -297,8 +285,6 @@ const ResultPage = () => {
     // 후보가 중복될 경우
     setSelector(maxCandidate.join());
     setSelectorPer(
-      // 문제 : let i 안에서 forEach를 두 번 돌다 보니 for i가 몇 번 도는지, 즉 selectedData.length만큼
-      // 값이 곱해졌다고 볼 수 있어서 다시 selectedData.length로 나눴다. 이게 맞나...
       (((maxVoted / userChoice.length) * 100) / selectedData.length).toFixed(2)
     );
   }, []);
